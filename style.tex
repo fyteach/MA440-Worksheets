@@ -1,0 +1,290 @@
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    margin=0.8in,
+    % left=0.8in,
+    % top=0.8in,
+    % headsep=\baselineskip,
+    % textwidth=26pc,
+    % marginparsep=2pc,
+    % marginparwidth=12pc,
+    % textheight=38\baselineskip,
+    % headheight=2\baselineskip,
+    % includemp,
+    % reversemarginpar,
+    % bindingoffset=1cm,
+    twoside,
+    asymmetric
+}
+
+\usepackage{amsmath, amsthm}
+
+\usepackage{libertine}  %%%%%The Linux Libertine font family
+\usepackage[libertine]{newtxmath}
+
+\usepackage{datetime}
+\newdateformat{mydate}{\monthname[\THEMONTH], \THEYEAR}
+
+\newdateformat{lastupdated}
+{\THEMONTH/\THEDAY/\THEYEAR}
+
+\newdateformat{semester}{
+  \ifthenelse{\THEMONTH=1}{Winter \THEYEAR}{
+    \ifthenelse{\THEMONTH<6}{Spring \THEYEAR}{
+      \ifthenelse{\THEMONTH>8}{Fall \THEYEAR}{
+        Summer \THEYEAR
+      }
+    }
+  }
+}
+
+\usepackage{titling}
+
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhf{}
+% \fancyhfoffset[L]{14pc}
+\setlength{\headheight}{18.0pt}
+\addtolength{\topmargin}{-6.0pt}
+
+\renewcommand{\headrulewidth}{1pt}
+% \renewcommand{\footrulewidth}{1pt}
+\fancyhead[RE,LO]{\bf \course}
+% \fancyhead[RO,LE]{\thepage}
+\fancyhead[C]{\large\bf Topic \leftmark}
+% \fancyfoot[RE, LO]{\raisebox{-10\baselineskip}{\semester{\thedate}}}
+% \fancyfoot[RO, LE]{\raisebox{-10\baselineskip}{\hfill \sffamily \theauthor}\hspace{-1ex}}
+% \fancyfoot[C]{\raisebox{-10\baselineskip}{\thepage}}
+\fancyfoot[C]{\thepage}
+
+% \usepackage{ifthen}
+% \usepackage{xparse}
+\usepackage{ifoddpage}
+
+% \usepackage{eso-pic}
+
+% \NewDocumentCommand{\addBG}{}{
+%   \AddToShipoutPicture{
+%     \AtTextLowerLeft{
+%       \put(-1pc,\LenToUnit{-\baselineskip}){
+%         \rule[0em]{1.5pt}{\dimexpr \textheight+2\baselineskip}
+%       }
+%     }
+%   }
+% }
+
+\NewDocumentCommand{\newlecture}{}{
+  \newpage
+  \checkoddpage
+  \ifoddpage
+  \else
+    \clearpage
+    \thispagestyle{empty}
+    % \ClearShipoutPictureBG
+    \cleardoublepage
+    \newpage
+    % \addBG
+  \fi
+}
+
+\usepackage{graphicx}
+\usepackage[
+  breaklinks = true,
+  colorlinks = true,
+  pdftitle = "MA440 Worksheets",
+  pdfauthor = "Dr. Ye"
+]{hyperref}
+\usepackage{bookmark}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+% \usepackage{changepage}
+
+% \newenvironment{fullwidth}{%
+%   \begin{adjustwidth}{-14pc}{}%
+%   \hsize=\linewidth%
+% }{
+%   \end{adjustwidth}
+% }
+
+\usepackage[inline]{enumitem}
+\setenumerate{
+	label=\textup{(\arabic*)},
+	% afterlabel={\quad},
+	%%vertical
+	topsep=0pt,
+	partopsep=0pt,
+	itemsep=6\baselineskip,
+	parsep=2pt,
+  after=\vspace*{\dimexpr 6\baselineskip},
+	% labelindent=0em,
+	% itemindent = *,
+	% itemindent=1ex,
+	% wide,
+	itemjoin={\hspace{0.1\textwidth}},
+	%%Horizontal
+}
+\setitemize{
+	%%vertical
+	topsep=0pt,
+	partopsep=0pt,
+	itemsep=0pt,
+	parsep=0pt,
+	%%Horizontal
+	labelindent=0em,
+	leftmargin =!,
+	itemindent = 0pt,
+	labelsep= 2pt,
+	labelwidth=1em,
+}
+\setlist{topsep=0pt}
+
+\SetEnumitemKey{sepno}{nosep, after=\vspace*{0pt}}
+
+\SetEnumitemKey{twocol}{
+itemsep = 1\itemsep,
+parsep = 1\parsep,
+before = \raggedcolumns\begin{multicols}{2},
+after = \end{multicols}}
+
+\SetEnumitemKey{threecol}{
+itemsep = 1\itemsep,
+parsep = 1\parsep,
+before = \raggedcolumns\begin{multicols}{3},
+after = \end{multicols}}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{pgfmath}
+\usepackage{tikz-cd}
+\usepackage{pgffor}
+\usepackage{tkz-euclide}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{
+    calc,
+    angles,
+    quotes,
+    arrows.meta,
+    math,
+    backgrounds,
+    pgfplots.statistics,
+    matrix,
+    patterns,
+    shapes.geometric,
+    spy,
+    intersections,
+    decorations.markings,
+    decorations.pathmorphing,
+    decorations.pathreplacing,
+    decorations.shapes
+}
+\pgfdeclarelayer{ft}
+\pgfdeclarelayer{bg}
+\pgfsetlayers{bg,main,ft}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% Setup the Coordinate System %%%%%%%%%%%%%%%%%%%%%%
+\pgfplotsset{
+    every axis/.style={
+        %		 axis equal image,
+        axis x line=middle,    % put the x axis in the middle
+        axis y line=middle,    % put the y axis in the middle
+        axis line style={-latex,very thick}, % arrows on the axis
+        xlabel={$x$},          % default put x on x-axis
+        ylabel={$y$},          % default put y on y-axis
+        xlabel style = {font=\tiny, at={(xticklabel* cs:1)}, anchor=south},
+        ylabel style = {font=\tiny, at={(yticklabel* cs:1)}, anchor=west},
+        scaled ticks=true,
+        x tick label style={font=\tiny, yshift=0.25ex, inner xsep=0pt},
+        y tick label style={font=\tiny, xshift=0.25ex, inner ysep=0pt},
+        grid style={black},
+        % set layers=standard,
+    }
+}
+
+%%%%%%%%%%%%%%% include files/Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{import}
+% \usepackage{subfiles}
+\usepackage{wrapfig}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% Cancel common factors in Math %%%%%%%%%%%%%%%%%%%%
+\usepackage[makeroom]{cancel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%% Math mode without vertical spacing %%%%%%%%%%%%%%%%%
+\makeatletter
+\g@addto@macro\normalsize{%
+    \setlength\abovedisplayskip{1pt plus 2pt minus 2pt}%
+    \setlength\belowdisplayskip{1pt plus 2pt minus 2pt}%
+    \setlength\abovedisplayshortskip{1pt plus 2pt minus 2pt}%
+    \setlength\belowdisplayshortskip{1pt plus 2pt minus 2pt}%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\ii}{\mathbf{i}}
+\newcommand{\parll}{ {\mathbin{\parallel}} }
+\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}
+
+\makeatletter
+\renewcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+\renewcommand*\widebar[1]{%
+\begingroup
+\def\mathaccent##1##2{%
+\rel@kern{0.8}%
+\overline{\rel@kern{-0.8}\macc@nucleus\rel@kern{0.2}}%
+\rel@kern{-0.2}%
+}%
+\macc@depth\@ne
+\let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+\mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+\macc@set@skewchar\relax
+\let\mathaccentV\macc@nested@a
+\macc@nested@a\relax111{#1}%
+\endgroup
+}
+\renewcommand{\bar}{\widebar}
+\newcommand*\centermath[1]{\omit\hfil~$\displaystyle#1$~\hfil\ignorespaces}
+\newcommand{\cmc}{\centermath}
+\newcommand*\ctc[1]{\omit\hfil\quad~ #1 ~\quad\hfil\ignorespaces}
+\newcommand{\dfn}[1]{\textit{\textbf{#1}}}
+
+
+\theoremstyle{plain}% default
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}{Example}[section]
+\newtheorem{exercise}{Exercise}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\newtheorem*{note}{Note}
+\newtheorem{case}{Case}
