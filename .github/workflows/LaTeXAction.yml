@@ -1,22 +1,18 @@
 name: Build and deploy latex sources to GitHub Pages
-on: push
+on: 
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: actions/cache@v3
-        name: Tectonic Cache
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
         with:
-          path: ~/.cache/Tectonic
-          key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
-          restore-keys: |
-           ${{ runner.os }}-tectonic-
-      - uses: wtfjoke/setup-tectonic@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-      - run: tectonic main.tex
+          root_file: main.tex
       - name: Copy to public folder for deployment
         run: |
           mkdir -p public

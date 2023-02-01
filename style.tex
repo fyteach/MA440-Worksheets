@@ -33,8 +33,6 @@
 \usepackage[T1]{fontenc}
 \usepackage[protrusion=true,expansion=true]{microtype}
 
-\setlength{\parindent}{12pt}
-
 \usepackage{datetime}
 \newdateformat{mydate}{\monthname[\THEMONTH], \THEYEAR}
 
@@ -305,33 +303,30 @@ after = \end{multicols}}
 
 \newcommand{\thmcnt}{section}
 
-% \tcbset{
-%   before doc body={%
-%     \setlength{\parindent}{2.5em}%
-%     \setlength{\parskip}{1ex plus 0.75ex minus 0.25ex}%
-%   }
-% }
+\setlength{\parindent}{1em}
+% \setlength{\parskip}{0.5\baselineskip}
+
+% \tcbset{parskip/.style={before={\par\pagebreak[0]\indent},
+% after={\par}}}
 
 \tcbset{
   common/.style={
     enhanced,
-    lower separated=false,
-    % before upper={\setlength{\parindent}{\normalparindent}},
-    breakable,
+    before upper app={\setlength{\parindent}{1em}},
+    % breakable,
     % frame hidden,
-    opacityframe=.1,
-    % opacityback=1,
+    opacityframe=.4,
     colback=white,
     coltitle=blue!90,
-    % width=\linewidth,
-    % nobeforeafter,
-    left=2mm,right=2mm,top=2mm,bottom=2mm,
+    grow to left by=0.5em,
+    grow to right by=0.5em,
+    left*=0pt,
+    right*=0pt,
     boxrule=1pt,
-    % titlerule=0mm,
-    % toptitle=1mm,
-    % bottomtitle=1mm,
-    arc=2pt,
-    fonttitle=\bfseries,
+    titlerule=0mm,
+    % theorem hanging indent=0pt,
+    arc=5pt,
+    fonttitle=\upshape\bfseries,
     theorem style=plain,
     },
   defstyle/.style={
@@ -339,6 +334,7 @@ after = \end{multicols}}
     colframe=green!50!black,
   },
   theostyle/.style={
+    fontupper=\itshape,
     % colback=red!10!white,
     colframe=red!75!black
   },
@@ -379,7 +375,7 @@ after = \end{multicols}}
       }
     }
     \DeclareTColorBox[auto counter,number within=\thmcnt, usecnt]{#1}{ g o t\label g }{ % #1 is the command name of the theorem environment
-        common, #3,
+    parskip, common, #3,
         % #3 is the thmstyle
         IfValueTF={##1}
           {ELEGANTtitle={#1}{##1}}
@@ -398,7 +394,7 @@ after = \end{multicols}}
           }
       }
     \DeclareTColorBox{#1*}{ g o }{
-        common,#3,
+      parskip, common,#3,
         IfValueTF={##1}
           {ELEGANTtitle={#1}{##1}}
           {
