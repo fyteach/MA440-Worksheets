@@ -17,10 +17,23 @@
     asymmetric
 }
 
-\usepackage{amsmath, amsthm}
+\usepackage{amsmath}
+% \usepackage{amsthm}
 
-\usepackage{libertine}  %%%%%The Linux Libertine font family
-\usepackage[libertine]{newtxmath}
+% \usepackage{libertine}  %%%%%The Linux Libertine font family
+% \usepackage[libertine]{newtxmath}
+
+\usepackage{comicneue}
+% \usepackage{noto-serif}
+\usepackage[default]{lato}
+\usepackage{libertinust1math}
+
+\usepackage{pifont,manfnt,bbding}
+
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+
+\setlength{\parindent}{12pt}
 
 \usepackage{datetime}
 \newdateformat{mydate}{\monthname[\THEMONTH], \THEYEAR}
@@ -113,7 +126,7 @@
 \usepackage{threeparttablex}
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
-\usepackage{xcolor}
+\usepackage[svgnames]{xcolor}
 
 % \usepackage{changepage}
 
@@ -274,17 +287,154 @@ after = \end{multicols}}
 \newcommand{\dfn}[1]{\textit{\textbf{#1}}}
 
 
-\theoremstyle{plain}% default
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}{Example}[section]
-\newtheorem{exercise}{Exercise}[section]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
-\newtheorem*{note}{Note}
-\newtheorem{case}{Case}
+%%%% Define Theorem Environment. Codes are modified from the Elegantbook class.
+
+\usepackage[most]{tcolorbox}
+% \tcbuselibrary{documentation}
+
+\newcommand{\proofname}{Proof}
+\newcommand{\definitionname}{Definition}
+\newcommand{\theoremname}{Theorem}
+\newcommand{\lemmaname}{Lemma}
+\newcommand{\propositionname}{Proposition}
+\newcommand{\corollaryname}{Corollary}
+\newcommand{\examplename}{Example}
+\newcommand{\exercisename}{Exercise}
+\newcommand{\remarkname}{Remark}
+\newcommand{\solutionname}{Solution}
+
+\newcommand{\thmcnt}{section}
+
+% \tcbset{
+%   before doc body={%
+%     \setlength{\parindent}{2.5em}%
+%     \setlength{\parskip}{1ex plus 0.75ex minus 0.25ex}%
+%   }
+% }
+
+\tcbset{
+  common/.style={
+    enhanced,
+    lower separated=false,
+    % before upper={\setlength{\parindent}{\normalparindent}},
+    breakable,
+    % frame hidden,
+    opacityframe=.1,
+    % opacityback=1,
+    colback=white,
+    % width=\linewidth,
+    % nobeforeafter,
+    left=2mm,right=2mm,top=2mm,bottom=2mm,
+    boxrule=1pt,
+    % titlerule=0mm,
+    % toptitle=1mm,
+    % bottomtitle=1mm,
+    arc=2pt,
+    fonttitle=\bfseries,
+    coltitle=black,
+    % theorem style=plain,
+    },
+  defstyle/.style={
+    % colback=green!10!white,
+    colframe=green!50!black,
+  },
+  theostyle/.style={
+    % colback=red!10!white,
+    colframe=red!75!black
+  },
+  exmstyle/.style={
+    % colback=blue!10!white,
+    colframe=blue!75!black
+  },
+  ELEGANTtitle/.code n args={2}
+    {
+      \tcbset
+        {
+          title=
+            {
+              \csname #1name\endcsname~%
+              \ifdef{\thetcbcounter}{\thetcbcounter}{}%
+              \ifblank{#2}{}{\ (#2)}
+            }
+        }
+    },
+  % #1 is the command name of the theorem environment
+  % #2 is the name of the theorem
+  ELEGANTlabel/.code n args={2}
+    {
+      \ifblank{#2}
+        {}{\tcbset{label={#1:#2}}}
+    }
+}
+
+
+\NewDocumentCommand \ELEGANTnewtheorem { m m m O{}  }{
+  \expandafter\ifblank\expandafter{#4}{
+      \tcbset{
+        new/usecnt/.style={}
+      }
+    }{
+      \tcbset{
+        new/usecnt/.style= {#4}
+      }
+    }
+    \DeclareTColorBox[auto counter,number within=\thmcnt, usecnt]{#1}{ g o t\label g }{ % #1 is the command name of the theorem environment
+        common, #3,
+        % #3 is the thmstyle
+        IfValueTF={##1}
+          {ELEGANTtitle={#1}{##1}}
+          {
+            IfValueTF={##2}
+            {ELEGANTtitle={#1}{##2}}
+            {ELEGANTtitle={#1}{}}
+          },
+          % ##1 is the name of the theorem in tcolorbox format.
+          % ##2 is the name of the theorem in amsthm format
+        IfValueT={##4}
+          { % ##4 is the label in tcolorbox format or the actual label in the command \label{}.
+            IfBooleanTF={##3} % ##3 is value if \label{} is used.
+              {ELEGANTlabel={##4}}
+              {ELEGANTlabel={#2}{##4}}
+          }
+      }
+    \DeclareTColorBox{#1*}{ g o }{
+        common,#3,
+        IfValueTF={##1}
+          {ELEGANTtitle={#1}{##1}}
+          {
+            IfValueTF={##2}
+            {ELEGANTtitle={#1}{##2}}
+            {ELEGANTtitle={#1}{}}
+          },
+      }
+  }
+
+\ELEGANTnewtheorem{definition}{def}{defstyle}
+
+\ELEGANTnewtheorem{theorem}{thm}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{proposition}{prp}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{lemma}{lem}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{corollary}{cor}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{example}{exm}{exmstyle}
+
+\ELEGANTnewtheorem{solution}{}{exmstyle}[no counter]
+
+\ELEGANTnewtheorem{proof}{}{exmstyle}[no counter]
+
+\ELEGANTnewtheorem{remark}{}{defstyle}[no counter]
+
+\newcounter{exer}[section]
+\setcounter{exer}{0}
+\renewcommand{\theexer}{\thesection.\arabic{exer}}
+
+\newenvironment{exercise}[1][]{
+  \refstepcounter{exer}
+  \par\noindent\makebox[-3pt][r]{
+    \footnotesize\color{red!90}\HandPencilLeft\quad}
+    \comicneueangular
+    \textbf{\color{blue!90}{\exercisename} \theexer ~~ #1}}{
+    \par\ignorespacesafterend}
