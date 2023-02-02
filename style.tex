@@ -144,12 +144,13 @@
 	partopsep=0pt,
 	% itemsep=6\baselineskip,
 	parsep=2pt,
-  % after=\vspace*{\dimexpr 6\baselineskip},
 	% labelindent=0em,
 	% itemindent = *,
 	% itemindent=1ex,
+  leftmargin=*,
 	% wide,
-	% itemjoin={\hspace{0.1\textwidth}},
+	itemjoin={\hfill},
+  % after=\hspace{\dimexpr 0.05\textwidth},
 	%%Horizontal
 }
 \setitemize{
@@ -350,7 +351,7 @@ after = \end{multicols}}
     %     \draw[line width=1pt, blue!75!black, yshift=12pt] (frame.south east)   -- ++(0:-4cm);},
     colback=blue!5!white,
     % colframe=blue!75!black
-    after app={\vspace*{8\baselineskip}}
+    after app={\vspace*{\stretch{1}}}
   },
   ELEGANTtitle/.code n args={2}
     {
@@ -441,5 +442,5 @@ after = \end{multicols}}
   \par\noindent\makebox[-3pt][r]{
     \footnotesize\color{red!90}\HandPencilLeft\quad}
     \comicneueangular
-    \textbf{\color{blue!90}{\exercisename} \theexer ~~ #1}}{\vspace*{8\baselineskip}
-    \par\ignorespacesafterend}
+    \textbf{\color{blue!90}{\exercisename} \theexer ~~ #1}}{
+    \par\vspace*{\stretch{1}}}
