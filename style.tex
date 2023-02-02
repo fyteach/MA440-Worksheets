@@ -142,14 +142,14 @@
 	%%vertical
 	topsep=0pt,
 	partopsep=0pt,
-	itemsep=6\baselineskip,
+	% itemsep=6\baselineskip,
 	parsep=2pt,
-  after=\vspace*{\dimexpr 6\baselineskip},
+  % after=\vspace*{\dimexpr 6\baselineskip},
 	% labelindent=0em,
 	% itemindent = *,
 	% itemindent=1ex,
 	% wide,
-	itemjoin={\hspace{0.1\textwidth}},
+	% itemjoin={\hspace{0.1\textwidth}},
 	%%Horizontal
 }
 \setitemize{
@@ -179,6 +179,12 @@ after = \end{multicols}}
 itemsep = 1\itemsep,
 parsep = 1\parsep,
 before = \raggedcolumns\begin{multicols}{3},
+after = \end{multicols}}
+
+\SetEnumitemKey{fourcol}{
+itemsep = 1\itemsep,
+parsep = 1\parsep,
+before = \raggedcolumns\begin{multicols}{4},
 after = \end{multicols}}
 
 \usepackage{tikz}
@@ -288,7 +294,7 @@ after = \end{multicols}}
 %%%% Define Theorem Environment. Codes are modified from the Elegantbook class.
 
 \usepackage[most]{tcolorbox}
-% \tcbuselibrary{documentation}
+\tcbuselibrary{theorems, hooks}
 
 \newcommand{\proofname}{Proof}
 \newcommand{\definitionname}{Definition}
@@ -303,23 +309,19 @@ after = \end{multicols}}
 
 \newcommand{\thmcnt}{section}
 
-\setlength{\parindent}{1em}
-% \setlength{\parskip}{0.5\baselineskip}
-
-% \tcbset{parskip/.style={before={\par\pagebreak[0]\indent},
-% after={\par}}}
+\newlength{\normalparindent}
+\setlength{\normalparindent}{\parindent}
 
 \tcbset{
   common/.style={
     enhanced,
-    before upper app={\setlength{\parindent}{1em}},
-    % breakable,
+    breakable,
     % frame hidden,
-    opacityframe=.4,
+    % opacityframe=.6,
     colback=white,
     coltitle=blue!90,
-    grow to left by=0.5em,
-    grow to right by=0.5em,
+    grow to left by=1em,
+    grow to right by=1em,
     left*=0pt,
     right*=0pt,
     boxrule=1pt,
@@ -328,10 +330,13 @@ after = \end{multicols}}
     arc=5pt,
     fonttitle=\upshape\bfseries,
     theorem style=plain,
+    before upper app={\setlength{\parindent}{\normalparindent}},
+    % adjusted title=left,
+    % halign title=left,
     },
   defstyle/.style={
     % colback=green!10!white,
-    colframe=green!50!black,
+    colframe=green!80!black,
   },
   theostyle/.style={
     fontupper=\itshape,
@@ -339,16 +344,20 @@ after = \end{multicols}}
     colframe=red!75!black
   },
   exmstyle/.style={
-    % colback=blue!10!white,
-    colframe=blue!75!black
+    frame hidden,
+    % borderline east={1pt}{0pt}{blue!75!black},
+    % overlay unbroken and last={%
+    %     \draw[line width=1pt, blue!75!black, yshift=12pt] (frame.south east)   -- ++(0:-4cm);},
+    colback=blue!5!white,
+    % colframe=blue!75!black
+    after app={\vspace*{8\baselineskip}}
   },
   ELEGANTtitle/.code n args={2}
     {
       \tcbset
         {
           title=
-            {
-              \csname #1name\endcsname~%
+            {\csname #1name\endcsname~%
               \ifdef{\thetcbcounter}{\thetcbcounter}{}%
               \ifblank{#2}{}{\ (#2)}
             }
@@ -432,5 +441,5 @@ after = \end{multicols}}
   \par\noindent\makebox[-3pt][r]{
     \footnotesize\color{red!90}\HandPencilLeft\quad}
     \comicneueangular
-    \textbf{\color{blue!90}{\exercisename} \theexer ~~ #1}}{
+    \textbf{\color{blue!90}{\exercisename} \theexer ~~ #1}}{\vspace*{8\baselineskip}
     \par\ignorespacesafterend}
