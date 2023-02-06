@@ -1,0 +1,154 @@
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{theorems, hooks}
+
+\newcommand{\proofname}{Proof}
+\newcommand{\definitionname}{Definition}
+\newcommand{\theoremname}{Theorem}
+\newcommand{\lemmaname}{Lemma}
+\newcommand{\propositionname}{Proposition}
+\newcommand{\corollaryname}{Corollary}
+\newcommand{\examplename}{Example}
+\newcommand{\exercisename}{Exercise}
+\newcommand{\remarkname}{Remark}
+\newcommand{\solutionname}{Solution}
+\newcommand{\howtoname}{How-to}
+
+\newcommand{\thmcnt}{section}
+
+\newlength{\normalparindent}
+\setlength{\normalparindent}{\parindent}
+
+\tcbset{
+  common/.style={
+    enhanced,
+    breakable,
+    % frame hidden,
+    % opacityframe=.6,
+    colback=white,
+    coltitle=blue!90,
+    grow to left by=1em,
+    grow to right by=1em,
+    left*=0pt,
+    right*=0pt,
+    boxrule=1pt,
+    titlerule=0mm,
+    arc=5pt,
+    fonttitle=\upshape\bfseries,
+    theorem style=plain,
+    before upper app={\setlength{\parindent}{\normalparindent}},
+    },
+  defstyle/.style={
+    % colback=green!10!white,
+    colframe=green!80!black,
+  },
+  theostyle/.style={
+    fontupper=\itshape,
+    % colback=red!10!white,
+    colframe=red!75!black
+  },
+  exmstyle/.style={
+    frame hidden,
+    colback=blue!5!white,
+    after app={\vspace{\stretch{1}}}
+  },
+  howtostyle/.style={
+    colframe=blue!5!black,
+    fonttitle=\notoserif\upshape,
+    fontupper=\notoserif\itshape,
+  },
+  rmkstyle/.style={
+    colframe=red!10!black
+  },
+  ELEGANTtitle/.code n args={2}
+    {
+      \tcbset
+        {
+          title=
+            {\csname #1name\endcsname~%
+              \ifdef{\thetcbcounter}{\thetcbcounter}{}%
+              \ifblank{#2}{}{\ (#2)}
+            }
+        }
+    },
+  % #1 is the command name of the theorem environment
+  % #2 is the name of the theorem
+  ELEGANTlabel/.code n args={2}
+    {
+      \ifblank{#2}
+        {}{\tcbset{label={#1:#2}}}
+    }
+}
+
+
+\NewDocumentCommand \ELEGANTnewtheorem { m m m O{}  }{
+  \expandafter\ifblank\expandafter{#4}{
+      \tcbset{
+        new/usecnt/.style={}
+      }
+    }{
+      \tcbset{
+        new/usecnt/.style= {#4}
+      }
+    }
+    \DeclareTColorBox[auto counter,number within=\thmcnt, usecnt]{#1}{ g o t\label g }{ % #1 is the command name of the theorem environment
+    parskip, common, #3,
+        % #3 is the thmstyle
+        IfValueTF={##1}
+          {ELEGANTtitle={#1}{##1}}
+          {
+            IfValueTF={##2}
+            {ELEGANTtitle={#1}{##2}}
+            {ELEGANTtitle={#1}{}}
+          },
+          % ##1 is the name of the theorem in tcolorbox format.
+          % ##2 is the name of the theorem in amsthm format
+        IfValueT={##4}
+          { % ##4 is the label in tcolorbox format or the actual label in the command \label{}.
+            IfBooleanTF={##3} % ##3 is value if \label{} is used.
+              {ELEGANTlabel={##4}}
+              {ELEGANTlabel={#2}{##4}}
+          }
+      }
+    \DeclareTColorBox{#1*}{ g o }{
+      parskip, common,#3,
+        IfValueTF={##1}
+          {ELEGANTtitle={#1}{##1}}
+          {
+            IfValueTF={##2}
+            {ELEGANTtitle={#1}{##2}}
+            {ELEGANTtitle={#1}{}}
+          },
+      }
+  }
+
+\ELEGANTnewtheorem{definition}{def}{defstyle}
+
+\ELEGANTnewtheorem{theorem}{thm}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{proposition}{prp}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{lemma}{lem}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{corollary}{cor}{theostyle}[use counter from = definition]%
+
+\ELEGANTnewtheorem{example}{exm}{exmstyle}
+
+\ELEGANTnewtheorem{solution}{}{exmstyle}[no counter]
+
+\ELEGANTnewtheorem{proof}{}{exmstyle}[no counter]
+
+\ELEGANTnewtheorem{howto}{}{howtostyle}[no counter]
+
+\ELEGANTnewtheorem{remark}{}{rmkstyle}[no counter]
+
+\newcounter{exer}[section]
+\setcounter{exer}{0}
+\renewcommand{\theexer}{\thesection.\arabic{exer}}
+
+\newenvironment{exercise}[1][]{
+  \refstepcounter{exer}
+  \par\noindent\makebox[-3pt][r]{
+    \footnotesize\color{red!90}\HandPencilLeft\quad}
+    \comicneueangular
+    \textbf{\color{blue!90}{\exercisename} \theexer ~~ #1}}{
+    \par\vspace{\stretch{1}}}

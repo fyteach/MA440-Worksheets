@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%% Cancel common factors in Math %%%%%%%%%%%%%%%%%%%%
+\usepackage[makeroom]{cancel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%% Math mode without vertical spacing %%%%%%%%%%%%%%%%%
+\makeatletter
+\g@addto@macro\normalsize{%
+    \setlength\abovedisplayskip{1pt plus 2pt minus 2pt}%
+    \setlength\belowdisplayskip{1pt plus 2pt minus 2pt}%
+    \setlength\abovedisplayshortskip{1pt plus 2pt minus 2pt}%
+    \setlength\belowdisplayshortskip{1pt plus 2pt minus 2pt}%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\ii}{\mathbf{i}}
+\newcommand{\parll}{ {\mathbin{\parallel}} }
+\newcommand{\prll}{{\mathbin{\!/\mkern-5mu/\!}}}
+
+\makeatletter
+\renewcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+\renewcommand*\widebar[1]{%
+\begingroup
+\def\mathaccent##1##2{%
+\rel@kern{0.8}%
+\overline{\rel@kern{-0.8}\macc@nucleus\rel@kern{0.2}}%
+\rel@kern{-0.2}%
+}%
+\macc@depth\@ne
+\let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+\mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+\macc@set@skewchar\relax
+\let\mathaccentV\macc@nested@a
+\macc@nested@a\relax111{#1}%
+\endgroup
+}
+\renewcommand{\bar}{\widebar}
+\newcommand*\centermath[1]{\omit\hfil~$\displaystyle#1$~\hfil\ignorespaces}
+\newcommand{\cmc}{\centermath}
+\newcommand*\ctc[1]{\omit\hfil\quad~ #1 ~\quad\hfil\ignorespaces}
+\newcommand{\dfn}[1]{\textit{\textbf{#1}}}
+

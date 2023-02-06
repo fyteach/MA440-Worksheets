@@ -1,51 +1,65 @@
 % !TEX TS-Program = pdflatex
+% arara: clean: { extensions: [ log, aux, toc, synctex.gz ] }
 
-\documentclass[12pt]{article}
+\documentclass[12pt,article]{memoir}
 
-\newcommand{\course}{MA440}
+\newcommand{\course}{MA440 Precalculus}
 
-\input{style.tex}
+\input{styles/packages.tex}
+\input{styles/pagestyle.tex}
+\input{styles/thmstyle.tex}
+\input{styles/liststyle.tex}
+\input{styles/tikzsetup.tex}
+\input{styles/mathsetup.tex}
 
 
 \title{\course~Worksheet}
-\author{Dr. Ye}
+\author{Fei Ye}
 \date{}
 
 % \date{\semester{\today}}
 
+\includeonly{Ch1-Functions.tex}
 
 \begin{document}
+
 % \newgeometry{margin=1in}
 \input{titlepage.tex}
+\input{frontmatter.tex}
 % \restoregeometry
 
+
+\mainmatter
+
+\pagestyle{myhf}
+
 \newlecture
-\addtocounter{page}{-2}
-\input{Ch1-Functions.tex}
+% \addtocounter{page}{-2}
+\include{Ch1-Functions.tex}
 
 % \newlecture
-% \input{Ch2-PolynomialRationalFunctions.tex}
+% \include{Ch2-PolynomialRationalFunctions.tex}
 
 % \newlecture
-% \input{Ch3-ExpLogFunctions.tex}
+% \include{Ch3-ExpLogFunctions.tex}
 
 % \newlecture
-% \input{Ch4-TrigFunctions.tex}
+% \include{Ch4-TrigFunctions.tex}
 
 % \newlecture
-% \input{Ch5-PeriodicFunctions.tex}
+% \include{Ch5-PeriodicFunctions.tex}
 
 % \newlecture
-% \input{Ch6-TrigEquationsIdentities.tex}
+% \include{Ch6-TrigEquationsIdentities.tex}
 
 % \newlecture
-% \input{Ch7-LawOfSineCosine.tex}
+% \include{Ch7-LawOfSineCosine.tex}
 
 % \newlecture
-% \input{Ch8-ConicSections.tex}
+% \include{Ch8-ConicSections.tex}
 
 % \newlecture
-% \input{Ch9-SequencesBinomialThm.tex}
+% \include{Ch9-SequencesBinomialThm.tex}
 
 
 \end{document}

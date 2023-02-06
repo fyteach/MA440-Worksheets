@@ -1,8 +1,9 @@
 % !TeX root =  main.tex
 
-\section{Functions}
+\chapter{Functions}
+\thispagestyle{chpg}
 
-\subsection{Basic Concepts}
+\section{Basic Concepts}
 \begin{definition}
   A \textbf{relation} is a set of ordered pairs. The set of the first components of each ordered pair is called the \textbf{domain} and the set of the second components of each ordered pair is called the \textbf{range}.
 
@@ -20,14 +21,17 @@
   is a function. Find the domain and the range.
 \end{example}
 
-
-If a function has $x$ as the independent variable and $y$ as the dependent variable, then we often say that $y$ is a function of $x$.
+\begin{definition}
+  If a function has $x$ as the independent variable and $y$ as the dependent variable, then we often say that $y$ is a function of $x$.
+\end{definition}
 
 \begin{example}
   Consider items and prices in a grocery store. Is price a function of item? Is item a function of price? 
 \end{example}
 
-  A function is often named by letters, such as $f$, $F$, $p$, or $q$. If $f$ is a function of $x$, then we denote it as $y=f(x)$ which is called the function notation. Here $f(x)$ is read as $f$ of $x$ or $f$ at $x$. The notation $f(x)$ represents the output of the function $f$ for a given input $x$.
+\begin{definition}
+  A function is often named by letters, such as $f$, $F$, $p$, or $q$. If $f$ is a function of $x$, then we denote it as $y=f(x)$ which is called the \textbf{function notation}. Here $f(x)$ is read as $f$ of $x$ or $f$ at $x$. The notation $f(x)$ represents the output of the function $f$ for a given input $x$.
+\end{definition}
   
 \begin{example}
   Use function notation to represent a function whose input is the name of a month and output is the number of days in that month.
@@ -89,7 +93,7 @@ If a function has $x$ as the independent variable and $y$ as the dependent varia
     \end{center}
   \end{multicols}
 \end{example}
-\vspace*{-8\baselineskip}
+\vspace*{-12\baselineskip}
 
 \newpage
 
@@ -101,11 +105,11 @@ If a function has $x$ as the independent variable and $y$ as the dependent varia
   Is the area of a circle a function of its radius? If yes, is the function one-to-one?
 \end{example}
 
-
-
-A graph is a function if very vertical line crosses the graph at most once. This method is known as the \textbf{vertical line test}.
+\begin{howto}
+  A graph is a function if very vertical line crosses the graph at most once. This method is known as the \textbf{vertical line test}.
 
 A function is an one-to-one if very horizontal line crosses the graph at most once. This method is known as the \textbf{horizontal line test}.
+\end{howto}
 
 \begin{example}
   Determine if the graph defines a function. If so, is it a one-to-one function?
@@ -172,12 +176,14 @@ A function is an one-to-one if very horizontal line crosses the graph at most on
 
 
 \newpage
+\thispagestyle{fancy}
 
-\subsection{Domains and Ranges}
-
+\section{Domains and Ranges}
+\begin{howto}
 The domain of a function $f$ consists of possible input values $x$. Or equivalently, the domain consists of all $x$ values except those that will make the function is undefined.
 
 The range of a function $f$ consists of all possible output values $y$. Equivalently, the range consists of $y$ value such that equation $y=f(x)$ has a solution $x$. 
+\end{howto}
 
 \begin{example}
   Find the domain of the function $$f(x)=\dfrac{x+1}{2-x}.$$
@@ -190,9 +196,11 @@ f(x)=\sqrt{7-x}.
 $$
 \end{example}
 
-\textbf{Set-builder notation} is a method of specifying a set of elements that satisfy a certain condition. It takes the form $\{x|\text{ statement about x}\}$ which is read as, ``the set of all x such that the statement about x is true."
-
-\textbf{Interval notation} is a way of describing sets that include all real numbers between a lower limit that may or may not be included and an upper limit that may or may not be included. The endpoint values are listed between brackets or parentheses. A square bracket indicates inclusion in the set, and a parenthesis indicates exclusion from the set.
+\begin{definition}
+  \textbf{Set-builder notation} is a method of specifying a set of elements that satisfy a certain condition. It takes the form $\{x|\text{ statement about x}\}$ which is read as, ``the set of all x such that the statement about x is true."
+  
+  \textbf{Interval notation} is a way of describing sets that include all real numbers between a lower limit that may or may not be included and an upper limit that may or may not be included. The endpoint values are listed between brackets or parentheses. A square bracket indicates inclusion in the set, and a parenthesis indicates exclusion from the set.
+\end{definition}
 
 \newpage
 
@@ -205,14 +213,14 @@ $$
   Find the domain and range of the function f whose graph is shown in Figure.
   \includegraphics[width=0.6\textwidth]{figs/FindDomainRangeCubic.png}
 \end{example}
-
-
-\newpage
+\vspace*{-8\baselineskip}
 
 \begin{example}
   Find the domain and range of the function
   $$f(x)=\frac{2}{x+3}.$$
 \end{example}
+
+\newpage
 
 \begin{example}
   Find the domain and range of the function
@@ -238,7 +246,7 @@ $$
 
 \newpage
 
-\subsection*{Exercises}
+\section*{Exercises}
 
 \begin{exercise}
   Find the domain of the function\\
@@ -255,6 +263,7 @@ $$
   Estimate the domain and range for the function defined by the graph. Write your answer in interval notation.\\
   \includegraphics[width=0.6\textwidth]{figs/CNX_Precalc_Figure_01_02_010.jpg}
 \end{exercise}
+\vspace*{-5\baselineskip}
 
 \newpage
 
@@ -282,4 +291,578 @@ $$
 
 \newpage
 
-\subsection{Rates of Change and Behavior of Graphs}
+\section{Rates of Change and Behavior of Graphs}
+
+\begin{definition}[Rate of Change]
+  The average rate of change of $f$ over an interval $[a,b]$ is defined as
+  $$\text{Average Rate Of Change}=\dfrac{f(b)-f(a)}{b-a}.$$
+  The average rate of change is the same as the slope of secant line passing through $(a, f(a))$ and $(b, f(b))$.
+  
+  By taking $x=a$ and $h=b-a$, the average of rate of change is the same the difference quotient of a function $f$ which is defined as
+  $$\text{Difference Quotient}=\dfrac{f(x+h)-f(x)}{h}.$$
+\end{definition}
+
+\begin{example}
+  After picking up a friend who lives 10 miles away, Anna records her distance from home over time. The values are shown in Table. Find her average speed over the first 6 hours.
+\begin{center}
+  \begin{tabular}{l*{8}{c}}
+    $t$ (hours) & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+    $D(t)$ (miles) & 10 & 55 & 90 & 153 & 214 & 240 & 292 & 300
+  \end{tabular}
+\end{center}
+\end{example}
+
+\begin{example}
+  Find the average rate of change of $f(x)=x^2-\dfrac{1}{x}$ over the interval $[2, 4]$.
+\end{example}
+
+\newpage
+
+\begin{example}
+  Find the average rate of change of  $g(t)=t^2+3t+1$ on the interval  $[0,a]$. The answer will be an expression involving $a$.
+\end{example}
+
+
+
+\begin{definition}[Increasing and Decreasing]
+  A function $f$ is \textbf{increasing} over an interval $(a, b)$ if $f(x_2)>f(x_1)$ for any $x_1<x_2$ in $(a, b)$. Equivalently, $f$ is increasing over $(a, b)$ if  the average rate of change is positive over any subinterval $(x_1, x_2)$ of $(a, b)$.
+  
+  A function $f$ is \textbf{decreasing} over an interval $(a, b)$ if $f(x_2)<f(x_1)$ for any $x_1<x_2$ in $(a, b)$. Equivalently, $f$ is decreasing over $(a, b)$ if  the average rate of change is negative over any subinterval $(x_1, x_2)$ of $(a, b)$.
+
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figs/CNX_Precalc_Figure_01_03_004.jpg}
+  \end{center}
+\end{definition}
+
+\newpage
+
+\begin{definition}[Local Maxima and Minima]
+  A function \(f\) has a \textbf{local maximum} at \(x=c\) if $f(c)\ge f(x)$ for any $x$ in a small interval containing $c$. A small interval containing $c$ is also known as a small \text{neighborhood} of $c$.
+
+  A function \(f\) has a \textbf{local minimum} at \(x=c\) if $f(c)\le f(x)$ for any $x$ in a small interval containing $c$.
+\end{definition}
+
+\begin{howto}
+  A function $f$ has a local maximum at $x=c$ if it changes from increasing to decreasing at $c$ in a neighborhood of $c$.
+  
+  A function $f$ has a local minimum at $x=c$ if it changes from decreasing to increasing at $c$ in a neighborhood of $c$.
+\end{howto}
+
+
+
+\begin{example}
+  Find the interval of increasing and the interval of decreasing, and the local maxima and local minima of the function $f$ defined by the following graph.
+  \begin{center}
+    \raggedright\includegraphics[width=0.5\textwidth]{figs/x^3-3x.png}
+  \end{center}
+\end{example}
+
+\newpage
+
+\begin{definition}[Absolute Maxima and Minima]
+  The \textbf{absolute maximum} of $f$ at \(x=c\) is \(f(c)\) where \(f(c)\ge f(x)\) for all \(x\) in the domain of \(f\).
+  
+  The \textbf{absolute minimum} of $f$ at \(x=c\) is \(f(c)\) where \(f(c)\le f(x)\) for all \(x\) in the domain of \(f\).
+\end{definition}
+
+\begin{example}
+  Finding the absolute maximum and minimum of the function $f$ defined by the following graph.
+  
+  \begin{center}
+    \raggedright\includegraphics[width=0.5\textwidth]{figs/(-x^3+3x-6)divby4.png}
+  \end{center}
+\end{example}
+
+\newpage
+\section*{Exercises}
+
+\begin{exercise}
+  The electrostatic force  $F$, measured in newtons, between two charged particles can be related to the distance between the particles  $d$, in centimeters, by the formula  $F(d)=\dfrac{2}{d^2}$. Find the average rate of change of force if the distance between the particles is increased from 2 cm to 6 cm.
+\end{exercise}
+
+\begin{exercise}
+  Find the average rate of change of $f(x)=x^2+2x-8$ on the interval $[5,a]$.
+\end{exercise}
+
+\begin{exercise}
+  Find the interval of increasing and the interval of decreasing, and the local maxima and local minima of the function $f$ defined by the following graph.
+
+  \begin{center}
+    \raggedright\includegraphics[width=0.5\textwidth]{figs/(xcube-6xsq-15x+16)divby12.png}
+  \end{center}
+\end{exercise}
+\vspace{-12\baselineskip}
+
+\newpage
+
+\begin{exercise}
+  Finding the absolute maximum and minimum of the function $f$ defined by the following graph.
+  
+  \begin{center}
+    \raggedright\includegraphics[width=0.5\textwidth]{figs/(-x^3+3x+10)divby4.png}
+  \end{center}
+\end{exercise}
+\vspace*{-0.5\textheight}
+
+\begin{exercise}
+  Find the interval of increasing and the interval of decreasing, and the local maxima and local minima of the function $f(x)=x^3-6x^2-15x+20$ using its graph.
+  %f\left(x\right)=2x^{3}-3x^{2}-12x+7
+\end{exercise}
+
+\newpage
+
+\section{Combination and Composition of Functions}
+
+\begin{definition}[Algebraic Operations of Functions]
+  Let \(f\) and \(g\) be two functions with domains $A$ and $B$ respectively. We define the linear combination, product, and quotient functions as follows.
+  \begin{center}
+    \begin{tabular}{rcl}
+      Linear combination: & $(af+bg)(x)=af(x)+bg(x)$ & with the domain $A\cap B$.\\
+      Product: & $(fg)(x)=f(x)g(x)$ & with the domain: $A\cap B$.\\
+      Quotient: & $\left(\dfrac{f}{g}\right)(x)=\dfrac{f(x)}{g(x)}$ & with the domain: $A\cap B\cap \{x\mid g(x)\neq 0\}$.
+    \end{tabular}
+  \end{center}
+  
+\end{definition}
+
+\begin{example}
+  Consider the functions \(f(x)=x-1\) and \(g(x)=x^2-1\). Find and simplify the functions \((g-f)(x)\) and \(\left(\dfrac{g}{f}\right)(x)\), and their domains.
+\end{example}
+
+\begin{definition}[Composition of functions]
+  Let \(f\) and \(g\) be two functions with domains $A$ and $B$ respectively. The \textbf{composite function} $f\circ g$ (also called the
+  composition of $f$ and $g$) is defined as
+  \[(f\circ g)(x)=f(g(x))\qquad \text{with the domain:}\quad B\cap \{x\mid g(x)\in A\}.\]
+\noindent
+  We read the left-hand side as ``\(f\) composed with \(g\) at \(x\),'' and the right-hand side as ``\(f\) of \(g\) of \(x\).''
+\end{definition}
+
+\begin{example}
+  Consider the functions \(f(x)=\sqrt{x-2}\) and \(g(x)=x^2+1\). 
+  \begin{enumerate}
+    \item Find and simplify the functions \((f\circ g)(x)\) and \((g\circ f))(x)\).  Are they the same function?
+    \item Find the domains of $f\circ g$ and $g\circ f$. Are they the same?
+  \end{enumerate}
+\end{example}
+
+\newpage
+
+\begin{example}
+  Consider $f(t)=t^2-4t$ and $h(x)=\sqrt{x+3}$. Evaluate\\ 
+  \begin{enumerate*}
+    \item $\dfrac{f(1)}{g(1)}$
+    \item $h(f(-1))$
+    \item $(f\circ h)(-1))$
+    \item $(f-h)(-1)$
+  \end{enumerate*}
+\end{example}
+
+\vspace*{2\baselineskip}
+
+\begin{example}
+  Using the graphs to evaluate the given functions.
+  \begin{multicols}{2}
+    \begin{enumerate}
+      \item $(f+g)(1)$
+      \item $(fg)(1)$
+      \item $\left(\dfrac{f}{g}\right)(1)$
+      \item $(g\circ f)(-3)$
+      \item $f(g(0))$
+      % \vfill\mbox{}
+    \end{enumerate}
+    \columnbreak
+    \includegraphics[width=0.45\textwidth]{figs/twoquadratics.png}
+  \end{multicols}
+\end{example}
+\vspace*{-0.2\textheight}
+
+\begin{example}
+  Consider the function $h(x)=\sqrt{x^2+1}$. Find two functions $f$ and $g$ so that $h(x)=f(g(x))$.
+\end{example}
+
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+  Consider the functions \(f(x)=x^2-1\) and \(g(x)=x+1\). 
+  \begin{enumerate}
+    \item Find the function \((f-g)(x)\) and its domain.
+    \item Find the function \((fg)(x)\) and its domain.
+    \item Find \(\left(\dfrac{f}{g}\right)(x)\) and its domain.
+    \item Find \((2f-3g)(1)\).
+    \item Find \(2fg-\left(\dfrac{3g}{f}\right)(1)\).
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Consider the functions $f(x)=\dfrac{1}{x-2}$ and $g(x)=\sqrt{x+4}$.
+
+\begin{enumerate}
+  \item Find $f\circ g$ and its domain.
+  \item Find $(g\circ f)(3)$.
+\end{enumerate}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+    Using the graphs to evaluate the given functions.
+    \begin{multicols}{2}
+      \begin{enumerate}
+        \item $(f-g)(1)$
+        \item $(fg)(0)$
+        \item $\left(\dfrac{f}{g}\right)(0)$
+        \item $(f\circ g)(2)$
+        \item $g(f(0))$
+      \end{enumerate}
+      \columnbreak
+      \includegraphics[width=0.5\textwidth]{figs/two-quadratics-exr.png}
+    \end{multicols}
+\end{exercise}
+
+\begin{example}
+  Consider the function $h(x)=\sqrt[3]{2x-1}$. Find two functions $f$ and $g$ so that $h(x)=f(g(x))$.
+\end{example}
+\newpage
+\section{Transformations}
+
+\begin{definition}
+  Given a function \(y=f(x)\), the function \(y=f(x)+k\), where \(k\) is a constant, is a \textbf{vertical shift} of the function \(f\). 
+\end{definition}
+
+\begin{howto}
+  Suppose $k$ is positive. 
+\begin{itemize}
+  \item To graph $y=f(x) {\color{red} +}k$, shift the graph of $y=f(x)$ {\color{red}upward} $k$ units. 
+  \item To graph $y=f(x) {\color{blue} -}k$, shift the graph of $y=f(x)$ {\color{blue}downward} $k$ units. 
+\end{itemize}
+\end{howto}
+
+\begin{example}
+  Consider the functions $f(x)=x^2$, $g(x)=x^2-1$ and $h(x)=x^2+2$.
+  \begin{enumerate}
+    \item Describe how to get the graph of $g$ from the graph of $f$.
+    \item Describe how to get the graph of $h$ from the graph of $f$.
+    \item Describe how to get the graph of $f$ from the graph of $h$.
+    \item Describe how to get the graph of $h$ from the graph of $g$.
+  \end{enumerate}
+\end{example}
+
+% \begin{example}
+%   A function $y=f(x)$ is given in the table below. Create a table for the function $g(x)=f(x)-3$.
+%   \begin{center}
+%     \begin{tabular}{c*{4}{c}}
+%      $x$ & 1 & 2 & 5 & 10\\
+%      $f(x)$ & 0 & 1 & 2 & 3
+%     \end{tabular}
+%   \end{center}
+% \end{example}
+
+
+
+\begin{definition}
+  Given a function \(y=f(x)\), the function \(y=f(x-h)\), where \(h\) is a constant, is a \textbf{horizontal shift} of the function \(f\). 
+  \end{definition}
+
+\begin{howto}
+  Suppose $h$ is positive. 
+\begin{itemize}
+  \item To graph $y=f(x {\color{red} -} h)$, shift the graph of $y=f(x)$ to the {\color{red} right} $h$ units. 
+  \item To graph $y=f(x {\color{blue} +} h)$, shift the graph of $y=f(x)$ to the {\color{blue} left} $h$ units. 
+\end{itemize}
+\end{howto}
+
+\begin{example}
+  Consider the functions $f(x)=x^2$, $g(x)=(x+1)^2$ and $h(x)=(x-2)^2$.
+  \begin{enumerate}
+    \item Describe how to get the graph of $g$ from the graph of $f$.
+    \vspace*{3\baselineskip}
+    \item Describe how to get the graph of $h$ from the graph of $f$.
+    \vspace*{3\baselineskip}
+    \item Describe how to get the graph of $f$ from the graph of $h$.
+    \vspace*{3\baselineskip}
+    \item Describe how to get the graph of $h$ from the graph of $g$.
+    \vspace*{3\baselineskip}
+  \end{enumerate}
+\end{example}
+
+\newpage
+
+\begin{example}
+  Sketch the graph of \(f(x)=|x|\). Then use the graph to sketch the graph of \(h(x)=f(x+2)-1\). 
+\end{example}
+
+\begin{example}
+  The function $y=g(x)$ shown in the picture is a shift of the square root function $y=\sqrt{x}$. Find $g(x)$.
+  \begin{center}
+    \raggedright\includegraphics[width=0.5\textwidth]{figs/shiftsqrtexm.png}
+  \end{center}
+\end{example}
+\vspace*{-0.4\textheight}
+
+\newpage
+
+\begin{definition}
+  Given a function \(y=f(x)\), the function \(g(x)=-f(x)\) is a \textbf{vertical reflection} of the function \(y=f(x)\), or a reflection about the $x$-axis;
+the function \(g(x)=f(-x)\) is a \textbf{horizontal reflection} of the function \(y=f(x)\) or a reflection about the $y$-axis.
+\end{definition}
+
+\begin{example}
+  Reflect the graph of \(f(x)=|x-1|\)\\
+  \begin{enumerate*}
+    \item vertically, then
+    \item horizontally.\hfill\mbox{}
+  \end{enumerate*}
+
+Denote the new function by $y=g(x)$. Find $g(x)$.
+\end{example}
+
+\begin{example}
+  A common model for learning has an equation similar to \(k(t)=-2^{-t}+1\), where \(k\) is the percentage of mastery that can be achieved after \(t\) practice sessions, and $t>0$. The function $k$ is a transformation of a part of the function \(f(t)=2^t\) shown below. Sketch the graph of \(k(t)\).\\
+\includegraphics[width=0.5\textwidth]{figs/learningmodel.png}
+\end{example}
+\vspace*{-0.4\textheight}
+
+\newpage
+
+\begin{definition}
+  A function is called an \textbf{even function} if $f(-x)=f(x)$ for $x$ in the domain of $f$.
+  
+  A function is called an \textbf{odd function} if $f(-x)=-f(x)$ for $x$ in the domain of $f$.
+\end{definition}
+
+\begin{remark}
+  The graph of an even function is symmetric about $y$-axis.
+
+  The graph of an odd function is symmetric about the origin. This symmetry is known as a rotation symmetry.
+\end{remark}
+
+\begin{example}
+  Group the functions according to even, odd, or other.\\
+  \begin{enumerate*}
+    \item $f(x)=x^2-1$
+    \item $g(x)=|x-1|$
+    \item $h(x)=x^3-2x$
+    \item $k(x)=\dfrac{1}{x^2}$.
+  \end{enumerate*}
+\end{example}
+
+\begin{definition}
+  Let $c$ be a positive number.
+  The function $g(x)=cf(x)$ is called a \textbf{vertical stretch} or \textbf{vertical compression} of $y=f(x)$ by a factor of $c$ if $c>1$ or $0<c<1$ respectively.
+\end{definition}
+\begin{remark}
+  If $a<0$, then $g(x)=cf(x)$ is a combination of a vertical stretch or compression with a vertical reflection.
+\end{remark}
+
+\begin{example}
+  The point $(9, -15)$ is on the graph of $y=f(x)$. Find a point on the graph of $g(x)=\dfrac{1}{3}f(x)$.
+\end{example}
+\vspace*{-0.3\textheight}
+
+\newpage
+\begin{example}
+  The function $y=g(x)$ given in the following graph can be obtained from $f(x)=x^2$ by a combination of shifting, reflecting, and stretching. Describe the transformation and find an equation of $g$.\\
+  \includegraphics[width=0.5\textwidth]{figs/transformationquadratic.png}
+\end{example}
+\vspace*{-0.1\textheight}
+
+\begin{definition}
+  Let $c$ be a positive number.
+  The function $g(x)=f(cx)$ is called a \textbf{horizontal stretch} or \textbf{horizontal compression} of $y=f(x)$ by a factor of $\dfrac{1}{c}$ if $0<c<1$ or $c>1$ respectively.
+\end{definition}
+\begin{remark}
+  If $c<0$, then $g(x)=f(cx)$ is a combination of a horizontal stretch or compression with a horizontal reflection.
+\end{remark}
+\begin{example}
+  The function $y=f(x)$ has two $x$-intercepts $(-2, 0)$ and $(4, 0)$. Determine if the function $g(x)=f(2x)$ has any $x$-intercepts. If so, find them. Otherwise explain why it has no $x$-intercept.
+\end{example}
+
+\begin{example}
+  Describe how to get the graph of the function $g(x)=4x^2$ from the graph of the function $f(x)$.
+\end{example}
+\newpage
+
+\begin{howto}
+  The graph of the function $g(x)=Af(Bx+C)+D$ can be obtained by the following transformations in the given order.
+  \begin{enumerate}
+    \item A vertical stretch/compression with the factor $|A|$ followed by a refection about $x$-axis if $A<0$.
+    \item A vertical shift of $D$ units
+    \item A horizontal shift of $C$ units.
+    \item A horizontal stretch/compression with the factor $|B|$ followed by a refection about $y$-axis if $B<0$.
+  \end{enumerate}
+\end{howto}
+\begin{remark}
+  A vertical shift of $\dfrac{D}{A}$ units may be done before the vertical stretch/compression. Because $g$ can also be written as $g(x)=A\left(f(BX+C)+\dfrac{D}{A}\right)$
+
+  A horizontal shift of $\dfrac{C}{B}$ units may be done after the horizontal stretch/compression. Because $g$ can also be written as $g(x)=Af\left(B\left(X+\dfrac{C}{B}\right)\right)+D$.
+\end{remark}
+\begin{example}
+  Using the graph of the function $y=f(x)$ given below to sketch the graph of the function $g(x)=-2f(3x-6)+4$.\\
+  \includegraphics[width=0.5\textwidth]{figs/-abs(x)+2.png}
+\end{example}
+
+\newpage
+\begin{example}
+Sketch the graph of the function $g(x)=2\sqrt{3x-1}-4$ by a sequence of transformation applied on the graph of $f(x)=\sqrt{x}$.  
+\end{example}
+
+\begin{example}
+  Find an equation of the function $y=g(x)$ whose graph is obtained from $f(x)=\sqrt{x}$ by the following transformations in the given order.
+  \begin{enumerate}
+    \item stretch vertically by a factor of 2
+    \item shift downward 2 units
+    \item shift 3 units to the left
+    \item stretch vertically by a factor $\dfrac{1}{2}$.
+  \end{enumerate}
+\end{example}
+
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+    Consider the functions $f(x)=x^2$, $g(x)=(x+1)^2-2$ and $h(x)=(x-2)^2+1$.
+    \begin{enumerate}
+      \item Describe how to get the graph of $g$ from the graph of $f$.
+      \item Describe how to get the graph of $h$ from the graph of $g$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Determine if the function is even, odd, or neither.\\
+    \begin{enumerate*}
+      \item $f(x)=1-x^2$.
+      \item $g(x)=\sqrt[3]{-x}$.
+      \item $g(x)=x^4-x^3$.
+      \hfill\mbox{}
+    \end{enumerate*}  
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  Sketch the graph of the function $g(x)=2|3x-6| + 4$ by a sequence of transformation applied on the graph of $f(x)=|x|$.  
+\end{exercise}
+
+\begin{exercise}
+  Find an equation of the function $y=g(x)$ whose graph is obtained from $f(x)=\sqrt[3]{x}$ by the following transformations in the given order.
+  \begin{enumerate}
+    \item Compress vertically by a factor of $\dfrac{1}{2}$.
+    \item Reflect vertically.
+    \item shift downward 2 units.
+    \item Compress horizontal by a factor $2$.
+    \item Shift 3 units to the right.
+  \end{enumerate}
+\end{exercise}
+
+\newpage
+
+\section{Inverse Functions}
+
+\begin{definition}
+  Let $y=f(x)$ be a one-to-one function with the domain $A$. A function \(f^{-1}(x)\) is an \textbf{inverse function} of \(f\) if \(f^{-1}(f(x))=x\) for all \(x\) in $A$.
+
+The notation \(f^{-1}\) is read “\(f\) inverse.” 
+\end{definition}
+\begin{remark}
+  \begin{enumerate}[series=PropertiesInverse]
+    \item If $f$ is a one-to-one function, then it has a unique inverse function $f^{-1}$. Here is the proof. Suppose $g$ is also an inverse $f$. Then $f(g(x))=x=f(f^{-1}(x))$. Then $g(x)=f^{-1}(f(g(x)))=f^{-1}(f(f^{-1}(x)))=f^{-1}(x)$.
+    \item Note that if $f^{-1}$ is the inverse of $f$, then $f$ is also the inverse of $f^{-1}$ that is $f(f^{-1})(x)=x$ for all $x$ in the domain of $f^{-1}$.
+  \end{enumerate}
+  \begin{multicols}{2}
+    \begin{enumerate}[resume=PropertiesInverse]
+      \item In general, $f^{-1}(x)\neq f(x)^{-1}$.
+      \item The graphs of a one-to-one function $f$ and its inverse $f^{-1}$ are symmetric about the diagonal line $y=x$.\\
+      \item Suppose $f$ has the domain $A$ and the range $B$, then $f^{-1}$ has the domain $B$ and the range $B$ (and vice verse).
+      \vfill\null
+    \end{enumerate}
+    \columnbreak
+\begin{center}
+  \includegraphics[width=0.25\textwidth]{figs/Inverse_Function_Graph.png}\\
+ {\footnotesize The above graph of $f$ and $f^{-1}$ is taken from \href{https://en.wikipedia.org/wiki/Inverse_function}{Wikipedia}.}
+\end{center}
+\end{multicols}
+\end{remark}
+
+\begin{example}
+  Let $f$ be a one-to-one function with \(f(3)=4\) and \(f(4)=5\). Find $f^{-1}(4)$.
+\end{example}
+
+\begin{example}
+  Let $f(x)=\dfrac{1}{x-1}$ and $g(x)=\dfrac{x+1}{x}$. Determine if $g$ is the inverse function of $f$.
+\end{example}
+
+
+\newpage
+
+\begin{example}
+  Consider the function $f(x)=x^2+1$ with $x>0$. Sketch the graph of $y=f^{-1}(x)$ without finding its equation.
+\end{example}
+
+\begin{howto}
+  Given a function $y=f(x)$, the inverse function is the solution $y$ of the equation $f(y)=x$. The domain and the range of $f$ and $f^{-1}$ can be obtained from the domains of $f$ and $f^{-1}$.
+\end{howto}
+
+
+\begin{example}
+  Consider the function $f(x)=2x-3$. Find the inverse function $f^{-1}$ and its domain and range.
+\end{example}
+
+\begin{example}
+  Consider the function $f(x)=\dfrac{x}{x-1}$. Find the inverse function $f^{-1}$ and its domain and range.
+\end{example}
+
+\newpage
+
+\begin{example}
+  Consider the function $f(x)=2(x+1)^3-1$. Find the inverse function $f^{-1}$ and its domain and range.
+\end{example}
+
+\begin{example}
+  Consider the function $f(x)=\sqrt{x-2}$. Find the inverse function $f^{-1}$ and its domain and range.
+\end{example}
+
+\begin{example} Find the inverse of each of the following functions if it exists.
+  \begin{center}
+    \begin{tabular}{*{5}{l}}
+      \hline
+    Constant & Identity & Quadratic & Cubic & Reciprocal\\
+    $f(x)=c$ & $f(x)=x$ & $f(x)=x^2$ & $f(x)=x^3$ & $f(x)=\dfrac{1}{x}$\\
+    \hline
+    Reciprocal squared & Cube Root & Square Root & Absolute Value & \\
+    $f(x)=\dfrac{1}{x^2}$ & $f(x)=\sqrt[3]{x}$ & $f(x)=\sqrt{x}$ & $f(x)=|x|$ & \\ 
+      \hline
+    \end{tabular}
+  \end{center}
+\end{example}
+
+\newpage
+
+\section*{Exercises}
+\begin{example}
+  Let $f$ be a one-to-one function with \(f(-2)=-3\) and \(f(-3)=4\). Find $f^{-1}(-3)$.
+\end{example}
+
+\begin{exercise}
+  Let \(f(x)=x^3-1\) and \(g(x)=\sqrt[3]{x+1}\). Is \(g=f^{-1}\)?
+\end{exercise}
+
+\begin{exercise}
+  Consider the function $f(x)=\dfrac{1}{x-1}+1$. Sketch the graph of $f^{-1}$ without finding its equation.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  Consider the function $f(x)=\dfrac{1-x}{x+1}$. Find the inverse function $f^{-1}$ and its domain and range.
+\end{exercise}
+
+\begin{exercise}
+  Consider the function $f(x)=3(x-1)^3+2$. Find the inverse function $f^{-1}$ and its domain and range.
+\end{exercise}
+
+\begin{exercise}
+  Consider the function $f(x)=\sqrt{x+1}-1$. Find the inverse function $f^{-1}$ and its domain and range.
+\end{exercise}

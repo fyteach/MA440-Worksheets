@@ -1,24 +1,36 @@
+% !TeX root =  main.tex
 
-\clearpage
+\let\cleardoublepage
+% \clearpage
 
-% \ClearShipoutPictureBG
+\thispagestyle{empty}%
 
-\begin{titlepage}
-  \vspace{2\baselineskip}
-  
-  \maketitle
-  
-  \thispagestyle{empty}
+	\vspace*{0.1\textheight}
+	\begin{center}\leavevmode
+		\normalfont
+		{\HUGE\raggedright \textbf{\@title}\par}%
+		\hrulefill\par
+		{\huge\raggedleft {\@author}\par}%
+		\vskip 1cm
+		%    {\Large \@date\par}%
+	\end{center}%
 
-  \vfill
-  \centering{
-  \small
-  Last updated on \lastupdated{\today}\\
-  
-  License: \href{CC BY-NC-SA}{https://creativecommons.org/licenses/by-nc-sa/4.0/}
-  } 
-  \vspace{3\baselineskip}
-\end{titlepage}
+	\vfill
 
-\newpage
-% \addBG
+	\begin{center}\large
+		Department of Mathematics and Computer Science\\
+
+		Queensborough Community College - CUNY\\
+
+		\the\year
+	\end{center}
+
+	\vspace*{2\baselineskip}
+
+  \begin{center}
+    {\color{blue} 
+      Last updated on \lastupdated{\today}
+    }
+   \end{center}
+
+   \newpage

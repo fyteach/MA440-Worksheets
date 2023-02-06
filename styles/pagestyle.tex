@@ -1,0 +1,109 @@
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    margin=0.8in,
+    % left=0.8in,
+    % top=0.8in,
+    % headsep=\baselineskip,
+    % textwidth=26pc,
+    % marginparsep=2pc,
+    % marginparwidth=12pc,
+    % textheight=38\baselineskip,
+    % headheight=2\baselineskip,
+    % includemp,
+    % reversemarginpar,
+    % bindingoffset=1cm,
+    twoside,
+    asymmetric
+}
+
+
+\usepackage{titling}
+\usepackage{titlesec}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %%%%%%%%%%%%% Chapter Style (no show of chapter title) %%%%%%%%%%%%%
+% \renewcommand*{\printchaptername}{}
+% \renewcommand*{\chapternamenum}{ }
+% \renewcommand*{\printchapternum}{}
+% \renewcommand*{\printchaptertitle}{}
+% \newcommand{\THchapter}[1]{\chapter[#1][#1]{}\vspace*{-\baselineskip}}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand*{\chaptername}{Topic}
+
+%%%%%%%%%%%%% hide chapter/section titles %%%%%%%%
+%%%%% need titlesec package %%%%%
+
+\makeatletter
+\titleformat{\chapter}[runin]{}{}{0pt}{\@gobble}[\ignorespaces]
+% \titleformat{\section}[runin]{}{}{0pt}{\@gobble}[\ignorespaces]
+% \titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}[\ignorespaces]
+\makeatother
+
+\titlespacing*{\chapter}{0pt}{-2.5\baselineskip}{0pt}
+% \titlespacing*{\section}{0pt}{-\parskip}{0pt}
+% \titlespacing*{\subsection}{0pt}{-\parskip}{0pt}
+
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+
+% \pagestyle{fancy}
+
+% \renewcommand{\sectionmark}[1]{\markright{#1}}
+% \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\thechapter~#1}{}}
+
+
+\fancypagestyle{myhf}{
+\fancyhf{}
+% \fancyhfoffset[L]{14pc}
+\setlength{\headheight}{24.0pt}
+% \addtolength{\topmargin}{-6.0pt}
+
+\renewcommand{\headrulewidth}{1pt}
+% \renewcommand{\footrulewidth}{1pt}
+
+% % \fancyhead[C]{\bfseries \course}
+
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\nouppercase{\rightmark}}
+
+\fancyfoot[R]{\semester{\today}}
+\fancyfoot[L]{\includegraphics[height=\baselineskip]{by-nc-sa.png}}
+\fancyfoot[C]{\thepage}
+}
+
+\fancypagestyle{chpg}[myhf]{
+  \fancyhead{}
+  \fancyhead[C]{\nouppercase{\leftmark}}
+}
+% \usepackage{ifthen}
+% \usepackage{xparse}
+\usepackage{ifoddpage}
+
+% \usepackage{eso-pic}
+
+% \NewDocumentCommand{\addBG}{}{
+%   \AddToShipoutPicture{
+%     \AtTextLowerLeft{
+%       \put(-1pc,\LenToUnit{-\baselineskip}){
+%         \rule[0em]{1.5pt}{\dimexpr \textheight+2\baselineskip}
+%       }
+%     }
+%   }
+% }
+
+\NewDocumentCommand{\newlecture}{}{
+  \newpage
+  \checkoddpage
+  \ifoddpage
+  \else
+    \clearpage
+    \thispagestyle{empty}
+    % \ClearShipoutPictureBG
+    \cleardoublepage
+    \newpage
+    % \addBG
+  \fi
+}

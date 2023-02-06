@@ -1,0 +1,52 @@
+\usepackage[inline]{enumitem}
+\setenumerate{
+	label=\textup{(\arabic*)},
+	% afterlabel={\quad},
+	%%vertical
+	topsep=0pt,
+	partopsep=0pt,
+	% itemsep=6\baselineskip,
+	parsep=2pt,
+	% labelindent=0em,
+	% itemindent = *,
+	% itemindent=1ex,
+  leftmargin=*,
+	% wide,
+	itemjoin={\hfill},
+  % after=\hspace{\dimexpr 0.05\textwidth},
+	%%Horizontal
+}
+\setitemize{
+	%%vertical
+	topsep=0pt,
+	partopsep=0pt,
+	itemsep=0pt,
+	parsep=0pt,
+	%%Horizontal
+	labelindent=0em,
+	leftmargin =!,
+	itemindent = 0pt,
+	labelsep= 2pt,
+	labelwidth=1em,
+}
+\setlist{topsep=0pt}
+
+\SetEnumitemKey{sepno}{nosep, after=\vspace*{0pt}}
+
+\SetEnumitemKey{twocol}{
+itemsep = 1\itemsep,
+parsep = 1\parsep,
+before = \raggedcolumns\begin{multicols}{2},
+after = \end{multicols}}
+
+\SetEnumitemKey{threecol}{
+itemsep = 1\itemsep,
+parsep = 1\parsep,
+before = \raggedcolumns\begin{multicols}{3},
+after = \end{multicols}}
+
+\SetEnumitemKey{fourcol}{
+itemsep = 1\itemsep,
+parsep = 1\parsep,
+before = \raggedcolumns\begin{multicols}{4},
+after = \end{multicols}}
