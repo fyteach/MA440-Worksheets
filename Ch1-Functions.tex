@@ -665,50 +665,32 @@ $$
 \section{Transformations}
 
 \begin{definition}
-  Given a function \(y=f(x)\), the function \(y=f(x)+k\), where \(k\) is a constant, is a \textbf{vertical shift} of the function \(f\). 
+  A function $y=g(x)$ that is obtained by substituting $x$ by $Bx-C$ and substituting $y$ by $Ay-D$, where $AB\ne 0$, from a function $y=f(x)$, is called a transformation of $f$.
+  
+  \begin{enumerate}
+    \item If $A=B=1$ and $C=0$, $g$ is called a vertical shift of $f$ by $C$ units.
+    \item If $A=B=1$ and $D=0$, $g$ is called a horizontal shift of $f$ by $D$ units.
+    \item If $A=1$, $B=-1$ and $C=D=0$, $g$ is called a horizontal reflection or a reflection along the $y$-axis of $f$.
+    \item If $A=-1$, $B=1$ and $C=D=0$, $g$ is called a vertical reflection or a reflection along the $y$-axis of $f$.
+    \item If $A=1$ and $C=D=0$, $g$ is called a horizontal stretch or compression of $f$ by a factor $\dfrac{1}{B}$ if $0<B<1$ or $B>1$ respectively.
+    \item If $B=1$ and $C=D=0$, $g$ is called a vertical stretch or compression of $f$ by a factor $\dfrac{1}{A}$ if $0<A<1$ or $A>1$ respectively.
+  \end{enumerate}
 \end{definition}
 
-\begin{howto}
-  Suppose $k$ is positive. 
-\begin{itemize}
-  \item To graph $y=f(x) {\color{red} +}k$, shift the graph of $y=f(x)$ {\color{red}upward} $k$ units. 
-  \item To graph $y=f(x) {\color{blue} -}k$, shift the graph of $y=f(x)$ {\color{blue}downward} $k$ units. 
-\end{itemize}
-\end{howto}
 
 \begin{example}
   Consider the functions $f(x)=x^2$, $g(x)=x^2-1$ and $h(x)=x^2+2$.
   \begin{enumerate}
     \item Describe how to get the graph of $g$ from the graph of $f$.
+    \vspace*{3\baselineskip}
     \item Describe how to get the graph of $h$ from the graph of $f$.
+    \vspace*{3\baselineskip}
     \item Describe how to get the graph of $f$ from the graph of $h$.
+    \vspace*{3\baselineskip}
     \item Describe how to get the graph of $h$ from the graph of $g$.
+    \vspace*{3\baselineskip}
   \end{enumerate}
 \end{example}
-
-% \begin{example}
-%   A function $y=f(x)$ is given in the table below. Create a table for the function $g(x)=f(x)-3$.
-%   \begin{center}
-%     \begin{tabular}{c*{4}{c}}
-%      $x$ & 1 & 2 & 5 & 10\\
-%      $f(x)$ & 0 & 1 & 2 & 3
-%     \end{tabular}
-%   \end{center}
-% \end{example}
-
-
-
-\begin{definition}
-  Given a function \(y=f(x)\), the function \(y=f(x-h)\), where \(h\) is a constant, is a \textbf{horizontal shift} of the function \(f\). 
-  \end{definition}
-
-\begin{howto}
-  Suppose $h$ is positive. 
-\begin{itemize}
-  \item To graph $y=f(x {\color{red} -} h)$, shift the graph of $y=f(x)$ to the {\color{red} right} $h$ units. 
-  \item To graph $y=f(x {\color{blue} +} h)$, shift the graph of $y=f(x)$ to the {\color{blue} left} $h$ units. 
-\end{itemize}
-\end{howto}
 
 \begin{example}
   Consider the functions $f(x)=x^2$, $g(x)=(x+1)^2$ and $h(x)=(x-2)^2$.
@@ -727,7 +709,7 @@ $$
 \newpage
 
 \begin{example}
-  Sketch the graph of \(f(x)=|x|\). Then use the graph to sketch the graph of \(h(x)=f(x+2)-1\). 
+  Sketch the graph of \(f(x)=|x|\) and then use the graph to sketch the graph of \(h(x)=f(x+2)-1\). 
 \end{example}
 
 \begin{example}
@@ -744,18 +726,10 @@ $$
     \addplot[blue, line width=1.5pt, smooth,samples=100,domain=-1:2] {sqrt(x+1)-1} node[pos=0.7, above left] {$y=g(x)$};
     \end{axis}
     \end{tikzpicture}
-  % \begin{center}
-  %   \raggedright\includegraphics[width=0.5\textwidth]{figs/shiftsqrtexm.png}
-  % \end{center}
 \end{example}
 \vspace*{-0.4\textheight}
 
 \newpage
-
-\begin{definition}
-  Given a function \(y=f(x)\), the function \(g(x)=-f(x)\) is a \textbf{vertical reflection} of the function \(y=f(x)\), or a reflection about the $x$-axis;
-the function \(g(x)=f(-x)\) is a \textbf{horizontal reflection} of the function \(y=f(x)\) or a reflection about the $y$-axis.
-\end{definition}
 
 \begin{example}
   Reflect the graph of \(f(x)=|x-1|\)\\
@@ -792,37 +766,7 @@ Denote the new function by $y=g(x)$. Find $g(x)$.
 \end{example}
 \vspace*{-0.3\textheight}
 
-\newpage
 
-\begin{definition}
-  A function is called an \textbf{even function} if $f(-x)=f(x)$ for $x$ in the domain of $f$.
-  
-  A function is called an \textbf{odd function} if $f(-x)=-f(x)$ for $x$ in the domain of $f$.
-\end{definition}
-
-\begin{remark}
-  The graph of an even function is symmetric about $y$-axis.
-
-  The graph of an odd function is symmetric about the origin. This symmetry is known as a rotation symmetry.
-\end{remark}
-
-\begin{example}
-  Group the functions according to even, odd, or other.\\
-  \begin{enumerate*}
-    \item $f(x)=x^2-1$
-    \item $g(x)=|x-1|$
-    \item $h(x)=x^3-2x$
-    \item $k(x)=\dfrac{1}{x^2}$.
-  \end{enumerate*}
-\end{example}
-
-\begin{definition}
-  Let $c$ be a positive number.
-  The function $g(x)=cf(x)$ is called a \textbf{vertical stretch} or \textbf{vertical compression} of $y=f(x)$ by a factor of $c$ if $c>1$ or $0<c<1$ respectively.
-\end{definition}
-\begin{remark}
-  If $a<0$, then $g(x)=cf(x)$ is a combination of a vertical stretch or compression with a vertical reflection.
-\end{remark}
 
 \begin{example}
   The point $(9, -15)$ is on the graph of $y=f(x)$. Find a point on the graph of $g(x)=\dfrac{1}{3}f(x)$.
@@ -848,13 +792,6 @@ Denote the new function by $y=g(x)$. Find $g(x)$.
 \end{example}
 \vspace*{-0.1\textheight}
 
-\begin{definition}
-  Let $c$ be a positive number.
-  The function $g(x)=f(cx)$ is called a \textbf{horizontal stretch} or \textbf{horizontal compression} of $y=f(x)$ by a factor of $\dfrac{1}{c}$ if $0<c<1$ or $c>1$ respectively.
-\end{definition}
-\begin{remark}
-  If $c<0$, then $g(x)=f(cx)$ is a combination of a horizontal stretch or compression with a horizontal reflection.
-\end{remark}
 \begin{example}
   The function $y=f(x)$ has two $x$-intercepts $(-2, 0)$ and $(4, 0)$. Determine if the function $g(x)=f(2x)$ has any $x$-intercepts. If so, find them. Otherwise explain why it has no $x$-intercept.
 \end{example}
@@ -864,20 +801,6 @@ Denote the new function by $y=g(x)$. Find $g(x)$.
 \end{example}
 \newpage
 
-\begin{howto}
-  The graph of the function $g(x)=Af(Bx+C)+D$ can be obtained by the following transformations in the given order.
-  \begin{enumerate}
-    \item A vertical stretch/compression with the factor $|A|$ followed by a refection about $x$-axis if $A<0$.
-    \item A vertical shift of $D$ units
-    \item A horizontal shift of $C$ units.
-    \item A horizontal stretch/compression with the factor $|B|$ followed by a refection about $y$-axis if $B<0$.
-  \end{enumerate}
-\end{howto}
-\begin{remark}
-  A vertical shift of $\dfrac{D}{A}$ units may be done before the vertical stretch/compression. Because $g$ can also be written as $g(x)=A\left(f(BX+C)+\dfrac{D}{A}\right)$
-
-  A horizontal shift of $\dfrac{C}{B}$ units may be done after the horizontal stretch/compression. Because $g$ can also be written as $g(x)=Af\left(B\left(X+\dfrac{C}{B}\right)\right)+D$.
-\end{remark}
 \begin{example}
   Using the graph of the function $y=f(x)$ given below to sketch the graph of the function $g(x)=-2f(3x-6)+4$.\\
   \begin{tikzpicture}[scale=1.2]
@@ -896,6 +819,7 @@ Denote the new function by $y=g(x)$. Find $g(x)$.
 \end{example}
 
 \newpage
+
 \begin{example}
 Sketch the graph of the function $g(x)=2\sqrt{3x-1}-4$ by a sequence of transformation applied on the graph of $f(x)=\sqrt{x}$.  
 \end{example}
@@ -909,6 +833,31 @@ Sketch the graph of the function $g(x)=2\sqrt{3x-1}-4$ by a sequence of transfor
     \item stretch vertically by a factor $\dfrac{1}{2}$.
   \end{enumerate}
 \end{example}
+
+\newpage
+
+\begin{definition}
+  A function is called an \textbf{even function} if $f(-x)=f(x)$ for $x$ in the domain of $f$.
+  
+  A function is called an \textbf{odd function} if $f(-x)=-f(x)$ for $x$ in the domain of $f$.
+\end{definition}
+
+\begin{remark}
+  The graph of an even function is symmetric about $y$-axis.
+
+  The graph of an odd function is symmetric about the origin. This symmetry is known as a rotation symmetry.
+\end{remark}
+
+\begin{example}
+  Group the functions according to even, odd, or other.\\
+  \begin{enumerate*}
+    \item $f(x)=x^2-1$
+    \item $g(x)=|x-1|$
+    \item $h(x)=x^3-2x$
+    \item $k(x)=\dfrac{1}{x^2}$.
+  \end{enumerate*}
+\end{example}
+
 
 \newpage
 
