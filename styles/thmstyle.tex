@@ -12,6 +12,7 @@
 \newcommand{\remarkname}{Remark}
 \newcommand{\solutionname}{Solution}
 \newcommand{\howtoname}{How-to}
+\newcommand{\notename}{Note}
 
 \newcommand{\thmcnt}{section}
 
@@ -41,7 +42,7 @@
     % colback=green!10!white,
     colframe=green!80!black,
   },
-  theostyle/.style={
+  thmstyle/.style={
     fontupper=\itshape,
     % colback=red!10!white,
     colframe=red!75!black
@@ -123,13 +124,13 @@
 
 \ELEGANTnewtheorem{definition}{def}{defstyle}
 
-\ELEGANTnewtheorem{theorem}{thm}{theostyle}[use counter from = definition]%
+\ELEGANTnewtheorem{theorem}{thm}{thmstyle}[use counter from = definition]%
 
-\ELEGANTnewtheorem{proposition}{prp}{theostyle}[use counter from = definition]%
+\ELEGANTnewtheorem{proposition}{prp}{thmstyle}[use counter from = definition]%
 
-\ELEGANTnewtheorem{lemma}{lem}{theostyle}[use counter from = definition]%
+\ELEGANTnewtheorem{lemma}{lem}{thmstyle}[use counter from = definition]%
 
-\ELEGANTnewtheorem{corollary}{cor}{theostyle}[use counter from = definition]%
+\ELEGANTnewtheorem{corollary}{cor}{thmstyle}[use counter from = definition]%
 
 \ELEGANTnewtheorem{example}{exm}{exmstyle}
 
@@ -140,6 +141,8 @@
 \ELEGANTnewtheorem{howto}{}{howtostyle}[no counter]
 
 \ELEGANTnewtheorem{remark}{}{rmkstyle}[no counter]
+
+\ELEGANTnewtheorem{note}{}{thmstyle}[no counter]
 
 \newcounter{exer}[section]
 \setcounter{exer}{0}

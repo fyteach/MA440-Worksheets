@@ -31,18 +31,21 @@
 
 %%%%%%%%%%%%%%%%% Setup the Coordinate System %%%%%%%%%%%%%%%%%%%%%%
 \pgfplotsset{
+    width=0.5\textwidth,
     every axis/.style={
         %		 axis equal image,
-        axis x line=middle,    % put the x axis in the middle
-        axis y line=middle,    % put the y axis in the middle
+        axis lines=middle,
+        unit vector ratio=1 1,
+        ymajorgrids=true,
+        xmajorgrids=true,
         axis line style={-latex,very thick}, % arrows on the axis
         xlabel={$x$},          % default put x on x-axis
         ylabel={$y$},          % default put y on y-axis
-        xlabel style = {font=\tiny, at={(xticklabel* cs:1)}, anchor=south},
-        ylabel style = {font=\tiny, at={(yticklabel* cs:1)}, anchor=west},
+        xlabel style = {font=\small, at={(xticklabel* cs:1)}, anchor=south east},
+        ylabel style = {font=\small, at={(yticklabel* cs:1)}, anchor=north west},
         scaled ticks=true,
-        x tick label style={font=\tiny, yshift=0.25ex, inner xsep=0pt},
-        y tick label style={font=\tiny, xshift=0.25ex, inner ysep=0pt},
+        x tick label style={font=\small, inner xsep=0pt},
+        y tick label style={font=\small, inner ysep=0pt},
         grid style={black},
         % set layers=standard,
     }
