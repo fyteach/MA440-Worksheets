@@ -714,13 +714,13 @@ $$
   Consider the functions $f(x)=x^2$, $g(x)=(x+1)^2$ and $h(x)=(x-2)^2$.
   \begin{enumerate}
     \item Describe how to get the graph of $g$ from the graph of $f$.
-    \vspace*{3\baselineskip}
+    % \vspace*{3\baselineskip}
     \item Describe how to get the graph of $h$ from the graph of $f$.
-    \vspace*{3\baselineskip}
+    % \vspace*{3\baselineskip}
     \item Describe how to get the graph of $f$ from the graph of $h$.
-    \vspace*{3\baselineskip}
+    % \vspace*{3\baselineskip}
     \item Describe how to get the graph of $h$ from the graph of $g$.
-    \vspace*{3\baselineskip}
+    % \vspace*{3\baselineskip}
   \end{enumerate}
 \end{example}
 
@@ -874,9 +874,17 @@ Denote the new function by $y=g(x)$. Find $g(x)$.
   \end{enumerate}
 \end{howto}
 \begin{remark}
-  A vertical shift of $\dfrac{D}{A}$ units may be done before the vertical stretch/compression. Because $g$ can also be written as $g(x)=A\left(f(BX+C)+\dfrac{D}{A}\right)$
+  Note the horizontal and vertical transformation may be switched.
 
-  A horizontal shift of $\dfrac{C}{B}$ units may be done after the horizontal stretch/compression. Because $g$ can also be written as $g(x)=Af\left(B\left(X+\dfrac{C}{B}\right)\right)+D$.
+  The order of horizontal or vertical transformation depends on how to get the point $(x, y)$ from a point $(a, b)$ on the original function under the substitutions $a=Bx+C$ and $y=Ab+D$. 
+  
+  To get $x$, one may add $-C$ to both sides first which corresponds to a horizontal shift of $-C$ units, and then multiply by $\frac1B$ which corresponds to a horizontal stretch/compression by a factor of $\frac1B$. To get $y$, one may first multiply $b$ by $A$ which corresponds to a vertical stretch/compression by a factor $A$ and then add $D$ which corresponds to a vertical shift of $D$ units.
+
+  Note one may also solve $x$ from $a=Bx+C$ by multiplying $\frac{1}{B}$ first then add $-\frac CB$ which corresponds to horizontal stretch/compression by a factor $\frac1B$ followed by a horizontal shift by $-\frac CB$ units.
+
+  Similarly, one may also get $y$ as $y=A(b+\frac DA)$ which leads to a vertical shift of $\frac DA$ units followed by a vertical stretch/compression by a factor $A$. 
+
+
 \end{remark}
 \begin{example}
   Using the graph of the function $y=f(x)$ given below to sketch the graph of the function $g(x)=-2f(3x-6)+4$.\\
@@ -906,7 +914,7 @@ Sketch the graph of the function $g(x)=2\sqrt{3x-1}-4$ by a sequence of transfor
     \item stretch vertically by a factor of 2
     \item shift downward 2 units
     \item shift 3 units to the left
-    \item stretch vertically by a factor $\dfrac{1}{2}$.
+    \item stretch horizontally by a factor $\dfrac{1}{2}$.
   \end{enumerate}
 \end{example}
 

@@ -7,7 +7,7 @@
   A function $f(x)=ax^2+bx+c$ with $a\ne 0$ is called a \textbf{quadratic function}. Its graph is called a \textbf{parabola}. By completing the square (let $h=-\dfrac{b}{2a}$ and $k=f(h)$), a quadratic function can written in the \textbf{standard form} (or \textbf{vertex form}): $f(x)=a(x-h)^2+k$. The vertical line $x=-\dfrac{b}{2a}$ (or $x=h$) is called the \textbf{axis of symmetry}. The \textbf{vertex} $(h,k)$ is the intersection of the axis of symmetry and the parabola.
 \end{definition}
 \begin{note}
-  The $y$-intercept of a quadratic function is $(0, f(0))$. The $x$-coordinates of $x$-intercepts are the zeros (or roots) of the function $f$, that is the solutions of the equation $f(x)=0$.
+  The $y$-intercept of a quadratic function is $(0, f(0))$. The $x$-coordinates of $x$-intercepts are the zeros (or roots) of the function $f$, that is, the solutions of the equation $f(x)=0$.
 \end{note}
 
 \begin{example}
@@ -43,6 +43,7 @@
   \end{axis}
   \end{tikzpicture}
 \end{example}
+\vspace*{-0.2\textheight}
 
 \begin{example}
   Find the domain and range of each function.\\
@@ -77,7 +78,7 @@
 
 \begin{exercise}
   For each of the following functions,
-  \begin{enumerate*}[label={()\alph*)}]
+  \begin{enumerate*}[label={(\alph*)}]
     \item $f(x)=x^2-4x+1$,
     \item $f(x)=-2x^2-4x+1$,\hfill\null
   \end{enumerate*}
@@ -186,8 +187,8 @@ where \(k\) and \(p\) are real numbers, and \(k\) is known as the \textbf{coeffi
   Let $n$ be a non-negative integer. A \textbf{polynomial function} of \textbf{degree} $n$ is a function that can be written in the form 
   \[f(x)=a_nx^n + \cdots + a_2x^2 + a_1x + a_0.\]
 \begin{itemize}
-  \item Each \(a_i\) is a \textbf{coefficient}. 
-  \item Each product \(a_ix^i\) is a \textbf{term} of a polynomial function.
+  \item Each \(a_i\) is called a \textbf{coefficient}. 
+  \item Each product \(a_ix^i\) is called a \textbf{term} of a polynomial function.
   \item The term $a_nx^n$ is called the \textbf{leading term}. The number $a_n$ is called the \textbf{leading coefficient}.
   \item The number $a_0$ is called the \textbf{constant term}.
 \end{itemize}
@@ -247,19 +248,6 @@ where \(k\) and \(p\) are real numbers, and \(k\) is known as the \textbf{coeffi
   Polynomial functions are smooth functions.
 \end{note}
 
-\begin{theorem}[Intermediate Value Theorem for Polynomials]
-If $f$ is a polynomial function and $f(a)f(b)<0$, then there exists at least one value $c$ between $a$ and $b$ such that $f(c)=0$.
-\end{theorem}
-
-\begin{corollary}
-  Let $f$ be a polynomial function, $a$ and $b$ real zeros of $f$. If $f$ has no other zeros between $a$ and $b$, then either $f(x)>0$ for all $x$ between $a$ and $b$ or $f(x)<0$ for all $x$ between $a$ and $b$.
-\end{corollary}
-
-\newpage
-
-\begin{example}
-  Determine if the polynomial function $f(x)=5x^4-2x^3-20$ has a zero on the interval $[1, 2]$.
-\end{example}
 
 \begin{definition}
   A \textbf{turning point} is a point at which the function values change from increasing to decreasing or decreasing to increasing.
@@ -268,6 +256,7 @@ If $f$ is a polynomial function and $f(a)f(b)<0$, then there exists at least one
 \begin{theorem}[Fundamental Theorem of Algebra]
   A degree $n$ polynomial function has at least one complex zero.
 \end{theorem}
+\footnotetext{For a relatively elementary proof of the Fundamental Theorem of Algebra, please read \href{https://tinyurl.com/tFToA}{https://tinyurl.com/tFToA}}
 
 \begin{proposition}
   A degree $n$ polynomial function may have at most $n$ real zeros and $n-1$ turning points.
@@ -278,8 +267,6 @@ If $f$ is a polynomial function and $f(a)f(b)<0$, then there exists at least one
 \begin{example}
   Consider the polynomial function  $f(x)=(x-2)(x+1)(x-4)$. Determine the zeros, the number of turning points, the $x$-intercepts, and the $y$-intercept.
 \end{example}
-
-\newpage
 
 \begin{example}
   What can we conclude about the leading term of the polynomial function $y=f(x)$ represented by the graph below.\\
@@ -299,7 +286,47 @@ If $f$ is a polynomial function and $f(a)f(b)<0$, then there exists at least one
 
 
 \newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+  Find the degree and leading coefficient, and determined the end behavior for the given polynomial.\\
+  \begin{enumerate*}
+    \item $f(x)=-2x^4$
+    \item $f(x)=2x^5-x^3$
+    \item $f(x)=-2x(1-x^2)$
+    \item $f(x)=(x^2-1)(2x-1)(x+2)$
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Find $x$-intercepts (if they exist) and the $y$-intercept of the polynomial function.\\
+  \begin{enumerate*}
+  \item $f(x)=-2x^4+x^2+1$
+  \item $f(x)=2x+x^3-3x^5$
+  \item $f(x)=x^{3} + x^{2} - 4 x - 4$
+\end{enumerate*}
+\end{exercise}
+
+\newpage
 \section{Graphs of Polynomial Functions}
+\begin{definition}
+  We say a zero $c$ of a polynomial function $f$ has the multiplicity $k$ if $f(x)=(x-c)^kg(x)$ and $c$ is not a zero of $g$.
+\end{definition}
+
+\begin{theorem}[Intermediate Value Theorem for Polynomials]
+  If $f$ is a polynomial function and $f(a)f(b)<0$, then there exists at least one value $c$ between $a$ and $b$ such that $f(c)=0$.
+  \end{theorem}
+  
+  \begin{corollary}
+    Let $f$ be a polynomial function, $a$ and $b$ real zeros of $f$. If $f$ has no other zeros between $a$ and $b$, then either $f(x)>0$ for all $x$ between $a$ and $b$ or $f(x)<0$ for all $x$ between $a$ and $b$.
+  \end{corollary}
+  
+  \newpage
+  
+  \begin{example}
+    Determine if the polynomial function $f(x)=5x^4-2x^3-20$ has a zero on the interval $[1, 2]$.
+  \end{example}
 
 \section{Dividing of Polynomials}
 
