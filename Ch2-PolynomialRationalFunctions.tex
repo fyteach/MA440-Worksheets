@@ -16,10 +16,10 @@
 
 \begin{note}
   \begin{itemize}
-    \item A quadratic function $f(x)=ax^2+bx+c$ can be obtained from $y=x^2$ by a combination of vertical stretch by a factor $|a|$, a vertical reflection if $a<0$, a vertical shift of $k$ units, and a horizontal shift of $h$ units.
+    \item A quadratic function $f(x)=ax^2+bx+c$ can be obtained from $y=x^2$ by a combination of vertical stretch by a factor $|a|$, a vertical reflection if $a<0$, a vertical shift of $f\left(-\frac{b}{2a}\right)$ units, and a horizontal shift of $-\frac{b}{2a}$ units.
     \item The domain of a quadratic function is $(-\infty, \infty)$.
-    \item If $a>0$, then the parabola opens upward, the function has a global (absolute) minimum $f\left(-\dfrac{b}{2a}\right)$ (or $f(h)$), and the domain of the function is $\bigg[f\left(-\dfrac{b}{2a}\right), \infty\bigg)$.
-    \item If $a<0$, then the parabola opens downward, the function has a global (absolute) maximum $f\left(-\dfrac{b}{2a}\right)$ (or $f(h)$), and the domain of the function is $\bigg(-\infty,f\left(-\dfrac{b}{2a}\right)\bigg]$.
+    \item If $a>0$, then the parabola opens upward, the function has an absolute minimum $f\left(-\frac{b}{2a}\right)$, and the domain of the function is $[f\left(-\frac{b}{2a}\right), \infty)$.
+    \item If $a<0$, then the parabola opens downward, the function has an absolute maximum $f\left(-\frac{b}{2a}\right)$, and the domain of the function is $(-\infty,f\left(-\frac{b}{2a}\right)]$.
   \end{itemize}
 \end{note}
 \newpage
@@ -131,6 +131,174 @@
 
 \section{Power and Polynomial Functions}
 
+\begin{definition}
+  A \textbf{power function} is a function that can be represented in the form
+\[f(x)=kx^p,\]
+where \(k\) and \(p\) are real numbers, and \(k\) is known as the \textbf{coefficient}.
+\end{definition}
+
+\begin{example}
+  Determine if the function is a power function.\\
+  \begin{enumerate*}
+    \item $f(x)=-2x^3$
+    \item $f(x)=\dfrac{1}{x^2}$
+    \item $f(x)=\sqrt[3]{x}$
+    \item $f(x)=2^x$
+    \item $f(x)=2x^2\cdot 3x^5$
+    \item $f(x)=\dfrac{x}{x+1}$
+  \end{enumerate*}
+\end{example}
+
+\begin{definition}
+  The \textbf{end behavior} of a function $f$ is the general direction that the function $f$ approaches as $x$ goes to $\infty$ or $-\infty$. 
+  
+  We use an arrow $\to$ to describe ``goes to'' or ``approaches to''. 
+  The notation $x\to \infty$ or $x\to -\infty$ means ``$x$ goes to infinity'' or ``$x$ goes to negative infinity'' respectively.
+  The notation $f(x)\to \infty$ or $f(x)\to -\infty$ means ``$f(x)$ goes to infinity'' or ``$f(x)$ goes to negative infinity'' respectively.
+
+  If $f(x)\to b$ as $x\to \infty$ or $x\to -\infty$, then we say the line $y=b$ is a \textbf{horizontal asymptote}.
+\end{definition}
+
+\begin{howto}
+  To determine the end behavior of a function $f$, take a large positive number $N$. 
+  
+  If $f(N)$ is a large positive number, then $f(x)\to \infty$ as $x\to \infty$. 
+  
+  If $-f(N)$ is a large positive number, then $f(x)\to -\infty$ as $x\to \infty$.
+  
+  If $f(-N)$ is a large positive number, then $f(x)\to\infty$ as $x\to -\infty$. 
+  
+  If $-f(-N)$ is a large positive number, then $f(x)\to-\infty$ as $x\to -\infty$.
+\end{howto}
+
+\begin{example}
+  Determine the end behavior(s) of the function.\\
+  \begin{enumerate*}
+    \item $f(x)=-2x^3$
+    \item $f(x)=\dfrac{1}{x^2}$
+    \item $f(x)=\sqrt[3]{x}$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\begin{definition}
+  Let $n$ be a non-negative integer. A \textbf{polynomial function} of \textbf{degree} $n$ is a function that can be written in the form 
+  \[f(x)=a_nx^n + \cdots + a_2x^2 + a_1x + a_0.\]
+\begin{itemize}
+  \item Each \(a_i\) is a \textbf{coefficient}. 
+  \item Each product \(a_ix^i\) is a \textbf{term} of a polynomial function.
+  \item The term $a_nx^n$ is called the \textbf{leading term}. The number $a_n$ is called the \textbf{leading coefficient}.
+  \item The number $a_0$ is called the \textbf{constant term}.
+\end{itemize}
+\end{definition}
+
+\begin{note}
+  The end behavior of a polynomial function $f(x)=a_nx^2+\cdots +a_0$ of degree $n$ is completely determined by the end behavior of the power function $g(x)=a_nx^n$.
+  
+  The domain of a polynomial function is $(-\infty, \infty)$. The range of an odd degree polynomial function is also $(-\infty, \infty)$. The range of an even degree polynomial function is either $[y_\text{min}, \infty)$ if $a_n>0$ or $(-\infty, y_\text{max}]$ if $a_n<0$, where $y_\text{min}$ (respectively, $y_\text{max}$) is the absolute minimum (respectively, maximum) of the function. 
+\end{note}
+
+\begin{example}
+  Determine the end behavior of the function.\\
+  \begin{enumerate*}
+    \item $f(x)=2x^4-3x+1$
+    \item $g(x)=-3x^3+2x^2-x$
+    \item $h(x)=-4x^6-7x^5+10x^4+2$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\begin{example}
+  Identify the degree, the leading therm and the end behavior of the polynomial function.\\
+  \begin{enumerate*}
+    \item $f(x)=-3x^2(x-1)(x+4)$
+    \item $f(x)=2x^3(1-x)(x+1)$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\begin{definition}
+  If $f$ is a polynomial function, then a number $c$ is called a \textbf{zero} of $f$ if $f(c)=0$.
+\end{definition}
+
+\begin{proposition}
+  Let $f$ be a polynomial and $c$ a real number. Then the following are equivalent:
+  \begin{enumerate}
+    \item $c$ is a zero of $f$.
+    \item $x=c$ is a solution of the equation $f(x)=0$.
+    \item $x-c$ is a factor of $f(x)$.
+    \item $(c,0)$ is an $x$-intercept of the function of $y=f(x)$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{example}
+  Find $x$-intercepts and the $y$-intercept of the polynomial function $f(x)=x^{3} + 3 x^{2} - x - 3$.
+\end{example}
+
+\begin{example}
+  Find $x$-intercepts and the $y$-intercept of the polynomial function $f(x)=x^4+2x^2-3$.
+\end{example}
+
+\begin{definition}
+  A \textbf{continuous} function has no breaks in its graph. A \textbf{smooth} function is a continuous function whose graph that has no sharp corners.
+\end{definition}
+\begin{note}
+  Polynomial functions are smooth functions.
+\end{note}
+
+\begin{theorem}[Intermediate Value Theorem for Polynomials]
+If $f$ is a polynomial function and $f(a)f(b)<0$, then there exists at least one value $c$ between $a$ and $b$ such that $f(c)=0$.
+\end{theorem}
+
+\begin{corollary}
+  Let $f$ be a polynomial function, $a$ and $b$ real zeros of $f$. If $f$ has no other zeros between $a$ and $b$, then either $f(x)>0$ for all $x$ between $a$ and $b$ or $f(x)<0$ for all $x$ between $a$ and $b$.
+\end{corollary}
+
+\newpage
+
+\begin{example}
+  Determine if the polynomial function $f(x)=5x^4-2x^3-20$ has a zero on the interval $[1, 2]$.
+\end{example}
+
+\begin{definition}
+  A \textbf{turning point} is a point at which the function values change from increasing to decreasing or decreasing to increasing.
+\end{definition}
+
+\begin{theorem}[Fundamental Theorem of Algebra]
+  A degree $n$ polynomial function has at least one complex zero.
+\end{theorem}
+
+\begin{proposition}
+  A degree $n$ polynomial function may have at most $n$ real zeros and $n-1$ turning points.
+\end{proposition}
+
+\newpage
+
+\begin{example}
+  Consider the polynomial function  $f(x)=(x-2)(x+1)(x-4)$. Determine the zeros, the number of turning points, the $x$-intercepts, and the $y$-intercept.
+\end{example}
+
+\newpage
+
+\begin{example}
+  What can we conclude about the leading term of the polynomial function $y=f(x)$ represented by the graph below.\\
+  \begin{tikzpicture}
+    \begin{axis}[
+    xmin=-4,
+    xmax=4,
+    ymin=-4,
+    ymax=4,
+    xtick={-10,-9,...,10},
+    ytick={-10,-9,...,10},]
+    \addplot[line width=1.5pt, smooth, samples=100, domain=-3:4] {1/4*(x)^(4)-2/3*(x)^(3)-1/2*(x)^(2)+2*(x)-3/2} node[pos=0.9, left] {$y=f(x)$};
+    \end{axis}
+  \end{tikzpicture}
+\end{example}
+\vspace*{-0.4\textheight}
+
+
+\newpage
 \section{Graphs of Polynomial Functions}
 
 \section{Dividing of Polynomials}

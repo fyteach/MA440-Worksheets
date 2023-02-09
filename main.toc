@@ -8,8 +8,8 @@
 \contentsline {chapter}{\chapternumberline {2}Polynomial and Rational Functions}{35}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Quadratic Functions}{35}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Power and Polynomial Functions}{40}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Graphs of Polynomial Functions}{40}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Dividing of Polynomials}{40}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Zeros of Polynomials}{40}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Rational Functions}{40}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Polynomial and Rational Inequalities}{40}{section.2.7}%
+\contentsline {section}{\numberline {2.3}Graphs of Polynomial Functions}{46}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Dividing of Polynomials}{46}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Zeros of Polynomials}{46}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Rational Functions}{46}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Polynomial and Rational Inequalities}{46}{section.2.7}%
