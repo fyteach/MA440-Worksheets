@@ -30,10 +30,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%% Setup the Coordinate System %%%%%%%%%%%%%%%%%%%%%%
+\tikzset{smooth}
 \pgfplotsset{
     width=0.5\textwidth,
+    % smooth,
+    samples=100,
     every axis/.style={
         %		 axis equal image,
+        title style={at={(0.5,-0.05)},anchor=north},
         axis lines=middle,
         unit vector ratio=1 1,
         ymajorgrids=true,

@@ -9,7 +9,13 @@
 \contentsline {section}{\numberline {2.1}Quadratic Functions}{35}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Power and Polynomial Functions}{40}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Graphs of Polynomial Functions}{45}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Dividing of Polynomials}{46}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Zeros of Polynomials}{46}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Rational Functions}{46}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Polynomial and Rational Inequalities}{46}{section.2.7}%
+\contentsline {section}{\numberline {2.4}Dividing of Polynomials}{51}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Zeros of Polynomials}{54}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Rational Functions}{57}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Polynomial and Rational Inequalities}{63}{section.2.7}%
+\contentsline {chapter}{\chapternumberline {3}Exponential and Logarithmic Functions}{67}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Exponential Functions}{67}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Logarithmic Functions}{67}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Properties of Logarithms}{67}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Exponential and Logarithmic Equations}{67}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Exponential and Logarithmic Models}{67}{section.3.5}%
