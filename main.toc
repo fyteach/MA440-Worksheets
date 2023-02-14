@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {2.7}Polynomial and Rational Inequalities}{63}{section.2.7}%
 \contentsline {chapter}{\chapternumberline {3}Exponential and Logarithmic Functions}{67}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Exponential Functions}{67}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Logarithmic Functions}{67}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Properties of Logarithms}{67}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Exponential and Logarithmic Equations}{67}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Exponential and Logarithmic Models}{67}{section.3.5}%
+\contentsline {section}{\numberline {3.2}Logarithmic Functions}{74}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Properties of Logarithms}{75}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Exponential and Logarithmic Equations}{76}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Exponential and Logarithmic Models}{77}{section.3.5}%
