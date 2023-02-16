@@ -36,7 +36,7 @@
 %%%%% need titlesec package %%%%%
 
 \makeatletter
-\titleformat{\chapter}[runin]{}{}{0pt}{\@gobble}[\ignorespaces]
+\titleformat{\chapter}[runin]{}{}{0pt}{\@gobble}[\ignorespaces] %% Hide Chapter title from content
 % \titleformat{\section}[runin]{}{}{0pt}{\@gobble}[\ignorespaces]
 % \titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}[\ignorespaces]
 \makeatother
@@ -69,7 +69,7 @@
 \fancyhead[L]{\nouppercase{\leftmark}}
 \fancyhead[R]{\nouppercase{\rightmark}}
 
-\fancyfoot[R]{\semester{\today}}
+\fancyfoot[R]{\DTMsetdatestyle{semester}\today}
 \fancyfoot[L]{\includegraphics[height=\baselineskip]{by-nc-sa.png}}
 \fancyfoot[C]{\thepage}
 }

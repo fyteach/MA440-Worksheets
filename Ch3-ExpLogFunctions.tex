@@ -180,12 +180,289 @@ Let $P$ be the initial amount of the account, known as the principal, $r$ the an
   \end{enumerate}
 \end{exercise}
 
-
 \newpage
 \section{Logarithmic Functions}
+\begin{definition}
+  Let $y=b^x$ be an exponential function, where $b>0$ and $b\ne 1$. Its inverse function is called the \textbf{logarithmic function with base $b$}, denoted as $\log_b$.
+\end{definition}
+
+From the definition of inverse function, for any $x>0$, $\log_bx$, read as the logarithm with base $b$ of $x$, is the unique number such that 
+\[b^{\log_bx}=x.\] 
+In terms of equations,
+\[y=\log_bx\quad \text{is equivalent to}\quad x=b^y.\]
+
+\begin{example}
+  Write the following logarithmic equality in exponential form.\\
+\begin{enumerate*}
+  \item $\log_6(\sqrt{6})=\dfrac{1}{2}$
+  \item $\log_3(9)=2$
+  \item $\log_2(x)=3$
+  \item $\log_x(5)=\dfrac{1}{3}$\hfill\null
+\end{enumerate*}
+\end{example}
+
+\begin{example}
+  Use the exponential form to evaluate the logarithm.\\
+  \begin{enumerate*}
+    \item $\log_24$
+    \item $\log_2\sqrt{2}$
+    \item $\log_93$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\begin{definition}
+  A \textbf{common logarithm} is a logarithm with base $10$. We write $\log_{10}(x)$ simply as $\log(x)$.
+  
+  A \textbf{natural logarithm} is a logarithm with base $e$, the natrual number. We write $\log_{e}(x)$ simply as $\ln(x)$.
+\end{definition}
+
+\begin{example}
+  Evaluate the logarithm without using a calculator.\\
+  \begin{enumerate*}
+    \item $\log(1000)$
+    \item $\ln(e^2)$\hfill\null
+  \end{enumerate*}
+\end{example}
+\vspace*{-0.1\textheight}
+
+\begin{example}
+  Evaluate the logarithm using a calculator.\\
+  \begin{enumerate*}
+    \item $\log 2$
+    \item $\ln 2$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\vspace*{-0.1\textheight}
+
+The domain of $y=\log_bx$ is $(0,\infty)$, and the range  is $(-\infty, \infty)$. The function $\log_b$ has an $x$-intercept $(1, 0)$ and a vertical asymptote $x=0$.
+
+If $b>1$, then $y=\log_bx$ is increasing. If $0<b<1$, then $y=\log_bx$ is decreasing.
+
+\begin{example}
+  Find the domain of the function.\\
+  \begin{enumerate*}
+    \item $f(x)=\log_2(x+3)$
+    \item $f(x)=\log_3(3-2x)$
+    \item $f(x)=\ln(4-x^2)$
+    \item $f(x)=\log\left(\dfrac{x+1}{x-2}\right)$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\begin{example}
+  Find an equation for the function $y=\log_bx$ whose graph is shown below.\\
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=-1,
+      xmax=5,
+      ymin=-3,
+      ymax=3,
+      xtick={-6,-5,...,6},
+      ytick={-6,-5,...,7}
+    ]
+    \addplot[line width=1.5pt, blue, smooth, samples=100, restrict y to domain=-4:4] {ln(x)/ln(3)};
+    \end{axis}
+  \end{tikzpicture}
+\end{example}
+
+\vspace*{-0.1\textheight}
+
+
+\begin{example}
+  Find an equation for the function $y=\log_b(x-a)$ whose graph is shown below.\\
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=-1,
+      xmax=5,
+      ymin=-3,
+      ymax=3,
+      xtick={-6,-5,...,6},
+      ytick={-6,-5,...,7}
+    ]
+    \addplot[line width=1.5pt, blue, smooth, samples=100, restrict y to domain=-4:4] {ln(x-1)/ln(2)};
+    \end{axis}
+  \end{tikzpicture}
+\end{example}
+
+\vspace*{-0.1\textheight}
+
+\begin{example}
+  Find the vertical asymptote of $f(x)=-2\log_3(x+4)+5$
+\end{example}
+
+\newpage
+
+\section*{Exercises}
+\begin{exercise}
+  Write the following logarithmic equality in exponential form.\\
+\begin{enumerate*}
+  \item $\log_42=x$
+  \item $\log_3(x)=2$
+  \item $\log_x(2)=\dfrac{1}{2}$\hfill\null
+\end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Evaluate the logarithm using a calculator.\\
+  \begin{enumerate*}
+    \item $\log 3$
+    \item $\ln 5$
+    \item $\dfrac{\log 5}{\ln 3}$
+    \hfill\null
+  \end{enumerate*}
+\end{exercise}
+\vspace*{-0.05\textheight}
+
+\begin{exercise}
+  Find the domain of the function.\\
+  \begin{enumerate*}
+    \item $f(x)=\log_2(2x-1)$
+    \item $f(x)=\ln(9-4x^2)$
+    \item $f(x)=\log\left(\dfrac{1-x}{x-2}\right)$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+\vspace*{\stretch{1.5}}
+\begin{exercise}
+  Find an equation for the function $y=-\log_bx$ whose graph is shown below.\\
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=-1,
+      xmax=5,
+      ymin=-3,
+      ymax=3,
+      xtick={-6,-5,...,6},
+      ytick={-6,-5,...,7}
+    ]
+    \addplot[line width=1.5pt, blue, smooth, samples=100, restrict y to domain=-4:4] {-ln(x)/ln(2)};
+    \end{axis}
+  \end{tikzpicture}
+\end{exercise}
+\vspace*{-0.1\textheight}
+
+\begin{exercise}
+  Find the vertical asymptote of $f(x)=-3\log_2(2x-1)+1$
+\end{exercise}
 
 \newpage
 \section{Properties of Logarithms}
+
+\begin{proposition}[Basic Properties of Logarithms]
+ Assume that $b>0$ and $b\neq 1$, and $x>0$. Then
+
+\begin{enumerate}
+\item
+  $b^{\log_bx}=x$.
+\item
+  $\log_b(b^x)=x$.
+\item
+  $\log_bb=1$ and $\log_b1=0$.
+\end{enumerate}
+\end{proposition}
+
+\begin{example}
+Evaluate the logarithm.\\
+  \begin{enumerate*}
+  \item
+    $\log_82$
+  \item
+    $10^{\log(\frac{1}{2})}$
+  \item
+    $\log_3(e^0)$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\begin{proposition}[Basic Properties of Logarithms]
+  Assume $M>0$, $N>0$, $b>0$ and $b\neq 1$. Then 
+
+  \begin{enumerate}
+  \item
+    (The product rule) $\log_b(MN)=\log_bM+\log_bN$
+  \item
+    (The quotient rule) $\log_b(\frac MN)=\log_bM-\log_bN$.
+  \item
+    (The power rule) $\log_b(M^p)=p\log_bM$, where $p$ is any real
+    number.
+  \item
+    (The change-of-base property) $\log_bM=\dfrac{\log_aM}{\log_ab}$,
+    where $a>0$ and $a\neq 1$.
+     In particular, \[
+     \log_bM=\dfrac{\log M}{\log b} \quad\text{and}\quad \log_bM=\dfrac{\ln M}{\ln b}.
+     \]
+  \end{enumerate}
+ \end{proposition}
+
+ \begin{example}
+  Expand the logarithmic expression.\\
+  \begin{enumerate*}
+   \item $\log_3(30x(3x+4))$
+   \item $\log\left(\dfrac{2x^2+6x}{3x+9} \right)$
+   \item $\log_2(\sqrt{x^2+1})$
+   \item $\ln\left (\dfrac{x^4(y-1)}{x^2+1}\right)$
+   \hfill\null
+  \end{enumerate*}
+ \end{example}
+
+ \newpage
+
+ \begin{example}
+  Evaluate the logarithm using calculator.\\
+  \begin{enumerate*}
+    \item $\log_25$
+    \item $\log_35-\log 53$
+    \item $\dfrac{\log_23}{\log_32}$\hfill\null
+  \end{enumerate*}
+ \end{example}
+ 
+\vspace*{-0.2\textheight}
+
+\begin{example}
+  Expand the logarithmic expression
+  \[\ln \left (\dfrac{\sqrt{(x-1){(2x+1)}^2}}{(x^2-9)}\right ).\]
+\end{example}
+
+\begin{example}
+  Condense the logarithmic expression.\\
+  \begin{enumerate*}
+    \item $\log_2(x^2)+\dfrac{1}{2}\log_2(x-1)-3\log_2({(x+3)}^2)$
+    \item $3\ln(x)-\dfrac{1}{2}\ln(x+1)-2\ln(\sqrt{x^2+3})$ \hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+  \begin{example}
+    Expand the logarithmic expression.\\
+    \begin{enumerate*}
+     \item $\log_6\left(\dfrac{64x^3(4x+1)}{(2x-1)} \right)$.
+     \item $\ln\left(\dfrac{\sqrt{(x-1)}(2x+1)^2}{(x^2-9)}\right)$
+     \hfill\null
+    \end{enumerate*}
+   \end{example}
+\end{exercise}
+
+\begin{exercise}
+  Condense the logarithmic expressions.\\
+  \begin{enumerate*}
+    \item $2\log x-4\log(x+5)+\dfrac{1}{3}\log(3x+5)$
+    \item $4(3\log(x)+\log(x+5)-\log(2x+3))$
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Evaluate the logarithm using a calculator.\\
+  \begin{enumerate*}
+    \item $\log_5{23}$
+    \item $\log_49-\log5$
+    \item $\dfrac{\ln10}{\log_5{10}}$\hfill\null
+  \end{enumerate*}
+\end{exercise}
 
 \newpage
 \section{Exponential and Logarithmic Equations}

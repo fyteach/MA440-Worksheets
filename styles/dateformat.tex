@@ -1,0 +1,35 @@
+% \usepackage{datetime}
+
+\usepackage[calc,en-US]{datetime2}
+
+\DTMnewdatestyle{lastupdated}{%
+    \renewcommand{\DTMdisplaydate}[4]{%
+        \number##1.\number##2.\number##3 }%
+    \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMnewdatestyle{moyr}{%
+    \renewcommand{\DTMdisplaydate}[4]{%
+    \DTMMonthname{##2}, \number##1 }%
+    \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMnewdatestyle{semester}% label
+{
+    \renewcommand{\DTMdisplaydate}[4]{%
+        \ifnum##2=1
+            Winter \number##1 
+        \else
+            \ifnum##2<6  
+                Spring \number##1
+            \else
+                \ifnum##2<8
+                    Summer \number##1
+                \else
+                    Fall \number##1
+                \fi
+            \fi
+        \fi
+    }%
+    \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}
+}
