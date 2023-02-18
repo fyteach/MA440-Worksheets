@@ -437,14 +437,12 @@ Evaluate the logarithm.\\
 \section*{Exercises}
 
 \begin{exercise}
-  \begin{example}
     Expand the logarithmic expression.\\
     \begin{enumerate*}
      \item $\log_6\left(\dfrac{64x^3(4x+1)}{(2x-1)} \right)$.
      \item $\ln\left(\dfrac{\sqrt{(x-1)}(2x+1)^2}{(x^2-9)}\right)$
      \hfill\null
     \end{enumerate*}
-   \end{example}
 \end{exercise}
 
 \begin{exercise}
@@ -467,13 +465,173 @@ Evaluate the logarithm.\\
 \newpage
 \section{Exponential and Logarithmic Equations}
 
+\begin{howto}[Exponential equation]
+ Isolate an exponential expression first and then take logarithm with the same base, or any base of both sides. After that, solve the resulting equation.
+\end{howto}
+
+\begin{example}
+  Solve\\ 
+  \begin{enumerate*}
+    \item $3^{x+1}=4$
+    \item $2^{x-1}=2^{2x-4}$
+    \item $8^{x+2}={16}^{x+1}$
+    \item $5^{x+2}=4^x$
+  \end{enumerate*}  
+\end{example}
+
+\begin{example}
+  Solve\\ 
+  \begin{enumerate*}
+    \item $100=20e^{2t}$
+    \item $4e^{2x}+5=12$
+    \item $e^{2x}-e^x=56$
+  \end{enumerate*}  
+\end{example}
+
+\newpage
+
+\begin{howto}[Logarithmic equation]
+  Isolate a logarithmic expression first and then apply the exponential function with the same base. After that, solve the resulting equation.
+\end{howto}
+
+\begin{example}
+  Solve\\
+\begin{enumerate*}
+  \item $2\ln x+3=7$
+  \item $\ln(x^2)=\ln(2x+3)$
+  \item $-\dfrac{1}{2}\log (x+1)-3=0$
+  \item $\ln (x)-\ln (x+3)=\ln 6$
+\end{enumerate*}
+\end{example}
+
+
+\begin{example}
+  The population of a small town is modeled by the equation $P=1650e^{0.5t}$ where $t$ is measured in years. In approximately how many years will the town's population reach $20,000$?
+\end{example}
+
+\newpage
+
+\begin{example}
+  The magnitude $M$ of an earthquake is represented by the equation $M=\dfrac{2}{3}\log\left( \dfrac{E}{E_0} \right)$ where $E$ is the amount of energy released by the earthquake in joules, and $E_0=10^{4.8}$ is the assigned minimal measure released by an earthquake. To the nearest hundredth, if the magnitude of an earthquake is 7.8, how much energy was released?
+\end{example}
+
+\begin{example}
+  An account with an initial deposit of $\$6,500$ earns $7.25\%$ annual interest, compounded monthly. After how many years, the balance will be doubled.
+\end{example}
+
+
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+  Solve\\ 
+  \begin{enumerate*}
+    \item $3^{1-x}=5$
+    \item $3^{x-2}=4^{2x}$
+    \item $5=10^{3t-2}$
+    \item $e^{2x}-2e^x=15$
+  \end{enumerate*}  
+\end{exercise}
+
+\begin{exercise}
+  Solve\\
+\begin{enumerate*}
+  \item $2\log x-3=-1$
+  \item $\ln(2x^2)=\ln(5x+3)$
+  \item $\dfrac{1}{2}\log_2(3x-1)=2$
+  \item $\ln(x-1)-\ln(x+1)=1$
+\end{enumerate*}
+\end{exercise}
+
+
 \newpage
 \section{Exponential and Logarithmic Models}
 
+\begin{howto}[Exponential Growth or Decay]
+  The function
+  \[A(t)=A_0e^{kt}\]
+is frequently used to model exponential growth (when $k>0$) or decay (when $k<0$), where $A_0$ is the initial quantity.
+\end{howto}
+
+\begin{example}
+  A population of bacteria doubles every hour. A culture started with 10 bacteria.
+  \begin{enumerate}
+    \item After 6 hours how many bacteria will there be?
+    \item After how many hours will the population be tripled?  
+  \end{enumerate}
+\end{example}
 
 
+\begin{example}
+  The half-life of carbon-14 is $5,730$ years. A bone fragment is found that contains  20\% of its original carbon-14. To the nearest year, how old is the bone?
+\end{example}
 
+\newpage
 
+\begin{example}
+  Sam goes to the doctor and the doctor gives him $15$ milligrams of radioactive dye. After $15$ minutes, $9$ milligrams of dye remain in Sam body. To leave the doctor's office, Sam must pass through a radiation detector that will sound the alarm if more than 2 milligrams of the dye are in his body. How long Sam's visit to the doctor take, assuming he was given the dye as soon as he arrived?
+\end{example}
+
+\begin{howto}[Newton's Law of Cooling]
+  The temperature of an object, $T$, in surrounding air with constant temperature $T_s$, will behave according to the formula
+  $$T(t)=Ae^{kt}+T_s,$$
+where $t$ is time, $A$ is the difference between the initial temperature of the object and the surroundings, $k$ is a constant, the continuous rate of cooling of the object.
+\end{howto}
+
+\begin{example}
+  A cheesecake is taken out of the oven with an ideal internal temperature of $165\unit{\degree F}$, and is placed into a $35\unit{\degree F}$ refrigerator. After $10$ minutes, the cheesecake has cooled to $150\unit{\degree F}$. If we must wait until the cheesecake has cooled to $70\unit{\degree F}$ before we eat it, how long will we have to wait?
+\end{example}
+
+\newpage
+\begin{howto}[Logistic Growth Model]
+  The logistic growth model is approximately exponential at first, but it has a reduced rate of growth as the output approaches the model's upper bound, called the carrying capacity. The logistic growth of a population over time $t$ is represented by the model
+  \[P(t)=\dfrac{c}{1+ae^{-bt}},\]
+  where $a$, $b$ and $c$ are positive constants, and $b$ is the growth rate, $c$ is the capacity.
+\end{howto}
+
+\begin{example}
+  The equation  $N(t)=\dfrac{500}{1+49e^{-0.7t}}$ models the number of people in a small town who have heard a rumor after $t$ days.
+  \begin{enumerate}
+    \item What's the population of the small town?
+    \item How many people started the rumor?
+    \item To the nearest whole number, how many people will have heard the rumor after $3$ days?
+  \end{enumerate}
+\end{example}
+
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+  A bacteria culture initially contains $3000$ bacteria and doubles every half hour. Find the size of the bacteria population after $80$ minutes.
+\end{exercise}
+
+\begin{exercise}
+  The half-life of tritium-3 is 12.25 years. How long would it take the sample to decay to 20\% of its original amount?
+\end{exercise}
+
+\begin{exercise}
+  A doctor prescribes $125$ milligrams of a therapeutic drug that decays by about $30\%$ each hour.
+  \begin{enumerate}
+    \item To the nearest hour, what is the half-life of the drug?
+    \item How long would it take the drug to decay to $30\%$ of its original amount.
+  \end{enumerate}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  A cup of coffee at $185\unit{\degree F}$ is placed into a $60\unit{\degree F}$ room. One hour later, the temperature of coffee has dropped to $120\unit{\degree F}$. How long will it take for the temperature to drop to $80\unit{\degree F}$?
+\end{exercise}
+
+\begin{exercise}
+  The population of a fish farm in $t$ years is modeled by the equation $P(t)=\dfrac{1000}{1+9e^{-0.6t}}$.
+\begin{enumerate}
+  \item What is the initial population of fish?
+  \item To the nearest tenth, what is the doubling time for the fish population?
+\end{enumerate}
+\end{exercise}
 
 
 
