@@ -76,11 +76,11 @@
 
 \fancypagestyle{chpg}[myhf]{
   \fancyhead{}
-  \fancyhead[C]{\nouppercase{\leftmark}}
+  \fancyhead[C]{\nouppercase{\Large\bfseries\leftmark}}
 }
 % \usepackage{ifthen}
 % \usepackage{xparse}
-\usepackage{ifoddpage}
+% \usepackage{ifoddpage}
 
 % \usepackage{eso-pic}
 
@@ -96,14 +96,14 @@
 
 \NewDocumentCommand{\newlecture}{}{
   \newpage
-  \checkoddpage
-  \ifoddpage
-  \else
-    \clearpage
-    \thispagestyle{empty}
+  % \checkoddpage
+  % \ifoddpage
+  % \else
+  %   \clearpage
+    \thispagestyle{chpg}
     % \ClearShipoutPictureBG
-    \cleardoublepage
-    \newpage
-    % \addBG
-  \fi
+  %   \cleardoublepage
+  %   \newpage
+  %   % \addBG
+  % \fi
 }
