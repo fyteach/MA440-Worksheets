@@ -3,8 +3,6 @@
 \chapter{Sequences and Series}
 
 \section{Sequences}
-Roughly speaking,a sequence is an ordered infinite list of numbers.
-An ordered list can be viewed as a function with the domain a subset of integers.
 
 \begin{definition}[Definition of a Sequence]
 A sequence is a function $a$ whose domain is the set of natural numbers. The terms of the sequence are the function values $a(1)$, $a(2)$, $a(3)$, $\cdots$, $a(n)$, $\cdots$
@@ -13,15 +11,14 @@ $a_1$, $a_2$, $a_3$, $\cdots$, $a_n$, $\cdots$
 The number $a_1$ is called the first term,$a_2$ is called the second term,and in general,$a_n$ is called the $n$-th term.
 \end{definition}
 \begin{example}
-    Find the first five terms and the 100-th term of the sequence defined by each formula.
+    Find the first five terms and the 100-th term of the sequence defined by each formula.\\
     \begin{enumerate*}
         \item $a_n=2n-1$
         \item $c_n=n^2-1$
         \item $t_n=\dfrac{n}{n+1}$
-        \item $r_n=\dfrac{(-1)^n}{2^n}$
+        \item $r_n=\dfrac{(-1)^n}{2^n}$\hfill\null
     \end{enumerate*}
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
     Find the $n$-th term of a sequence whose first several terms are given.
@@ -33,8 +30,11 @@ The number $a_1$ is called the first term,$a_2$ is called the second term,and in
     \end{enumerate}
 \end{example}
 
-In some sequences, the $n$-th term may depend on some or all of the terms preceding
-it. Such a sequence is called recursive.
+\newpage
+
+\begin{definition}
+  In some sequences, the $n$-th term may depend on some or all of the terms preceding it. Such a sequence is called \textbf{recursive sequence}.  
+\end{definition}
 
 \begin{example}
    A sequence is defined recursively by $a_1=1$ and $a_n=3(a_{n-1}+2)$.
@@ -51,21 +51,24 @@ it. Such a sequence is called recursive.
     Find the first 11 terms of the sequence defined recursively by $F_1=1$, $F_2=1$ and 
     $$F_n=F_{n-1} + F_{n-2}.$$
 \end{example}
-\vspace*{8\baselineskip}
 
+
+\newpage
 \begin{definition}[The Partial Sums of a Sequence]
 For the sequence $\{a_n\}$, the sum $S_n$ for first $n$ terms is called the $n$-th partial sum. The sequence $\{S_n\}$ is called the sequence of partial sums.
 \end{definition}
 
+
 \begin{example}
     Find the first four partial sums and the $n$-th partial sum of the sequence given by $a_n=\dfrac{1}{2^n}$.
 \end{example}
-\vspace*{8\baselineskip}
+
 
 \begin{example}
     Find the first four partial sums and the $n$-th partial sum of the sequence given by $a_n=\dfrac{1}{n}-\dfrac{1}{n+1}$.
 \end{example}
-\vspace*{8\baselineskip}
+
+\newpage
 
 \begin{definition}[Sigma notation]
     The sigma notation or summation notation for a partial sum of the first $n$-terms of a sequence $a_n$ is defined as
@@ -75,27 +78,78 @@ $k$ is called the index of summation, or the summation variable.
 \end{definition}
 
 \begin{example}
-    Find the sum.
-    \begin{enumerate}
+    Find the sum.\\
+    \begin{enumerate*}
         \item $\sum\limits_{k=1}^5 k^2$
-        \item $\sum\limits_{j=3}^5\dfrac{1}{j}$
-    \end{enumerate}
+        \item $\sum\limits_{j=3}^5\dfrac{1}{j}$\hfill\null
+    \end{enumerate*}
 \end{example}
 
 \begin{example}
-    Write each sum using sigma notation.
-    \begin{enumerate}
+    Write each sum using sigma notation.\\
+    \begin{enumerate*}
         \item $1^3+2^3+4^3+\cdots+7^3$
-        \item $\sqrt{1}+\sqrt{3}+\sqrt{5}+\cdots+\sqrt{13}$
-    \end{enumerate}
+        \item $\sqrt{1}+\sqrt{3}+\sqrt{5}+\cdots+\sqrt{13}$\hfill\null
+    \end{enumerate*}
 \end{example}
 
 \begin{theorem}[Properties of sums] Let $\{a_n\}$ and $\{b_n\}$ be two sequences.
-    \begin{enumerate}[itemsep=0.5\baselineskip, after=\vspace*{0.5\baselineskip}]
+    \begin{enumerate}
         \item $\sum\limits_{k=1}^n (c\cdot a_k+ d\cdot b_k)=c\sum\limits_{k=1}^n a_k+d\sum\limits_{k=1}^nb_k$ for any constants $c$ and $d$.
         \item $\sum\limits_{k=1}^na_k=\sum\limits_{k=1}^m a_k +\sum\limits_{k=m+1}^n$ for any $1<m<n$.
     \end{enumerate}
 \end{theorem}
+
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+    Find the first 12-th terms of the sequence with the given $n$-th term.\\
+\begin{enumerate*}
+    \item $a_n=\dfrac{n^2}{n+1}$
+    \item $a_n=(-1)^n\dfrac{2^n}{n}$
+    \item $a_n=\dfrac{(2n)!}{2^nn!}$\hfill\null
+\end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+    Find the first nine terms of the sequence.
+\begin{enumerate}
+    \item $a_n=a_{n-1}+2n-1$, $a_1=1$
+    \item $a_n=(-1)^n\dfrac{a_{n-1}}{n}$, $a_1=1$
+    \item $a_n=a_{n-1}-a_{n-2}$, $a_1=1$ and $a_2=2$
+\end{enumerate}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  Find the sum.\\
+  \begin{enumerate*}
+      \item $\sum\limits_{k=1}^4 k^3$
+      \item $\sum\limits_{j=2}^4\dfrac{1}{j-1}$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Write each sum using sigma notation.\\
+  \begin{enumerate*}
+      \item $1^3+3^3+5^3+\cdots+11^3$
+      \item $\sqrt[3]{1}+\sqrt[3]{2}+\sqrt[3]{3}+\cdots+\sqrt[3]{10}$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Find the partial sum.\\
+  \begin{enumerate*}
+      \item $\sum\limits_{k=1}^{10}(k-1)^2$
+      \item $\sum\limits_{i=2}^{7}\dfrac{2i}{2i-1}$
+      \item $\sum\limits_{j=1}^{3}\dfrac{(-2)^j}{j+1}$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\newpage
 
 \section{Arithmetic Sequences}
 
@@ -110,29 +164,28 @@ The number $a$ is the first term, and $d$ is the common difference of the sequen
     Find $a_n$ for the arithmetic sequence
     \[9,4,-1,-6,-11,\cdots\]
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
 The 11-th term of an arithmetic sequence is 32, and the 19-th term is 72. Find the 100-th term.
 \end{example}
-\vspace*{6\baselineskip}
 
-\noindent
-\begin{minipage}{\textwidth}
- \begin{minipage}{0.49\textwidth}
+% \noindent
+% \begin{minipage}{\textwidth}
+%  \begin{minipage}{0.49\textwidth}
         \begin{theorem}[Sum of natural numbers]\mbox{}
-    \begin{enumerate}[itemsep=0.5\baselineskip,, after=\vspace*{0.5\baselineskip}]
+    \begin{enumerate}
         \item $\sum\limits_{k=1}^n c=cn$, where $c$ is a constant.
         \item $\sum\limits_{k=1}^n k=\dfrac{n(n+1)}{2}$.
     \end{enumerate}
 \end{theorem}
-    \end{minipage}
-    \begin{minipage}{0.49\textwidth}
-        \centering
-\includegraphics[width=0.6\textwidth, keepaspectratio]{figs/sumofk.png}
-    \end{minipage}
-\end{minipage}
-\vspace*{\baselineskip}
+%     \end{minipage}
+%     \begin{minipage}{0.49\textwidth}
+%         \centering
+% \includegraphics[width=0.6\textwidth, keepaspectratio]{figs/sumofk.png}
+%     \end{minipage}
+% \end{minipage}
+
+\newpage
 
 \begin{theorem}[Sum of an Arithmetic Sequence]
     For the \textbf{arithmetic sequence} $a_n$, the $n$-th partial sum is
@@ -142,18 +195,15 @@ The 11-th term of an arithmetic sequence is 32, and the 19-th term is 72. Find t
 \begin{example}
     Find the sum of the first 50 odd numbers.
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
     Find the following partial sum of an arithmetic sequence:
     \[3+7+11+15+\cdots+159.\]
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
     How many terms of the arithmetic sequence $5$, $7$, $9$, $\cdots$ must be added to get $572$?
 \end{example}
-\vspace*{6\baselineskip}
 
 % \newpage
 % \textbf{The following results are optional.}
@@ -186,7 +236,29 @@ The 11-th term of an arithmetic sequence is 32, and the 19-th term is 72. Find t
 % \end{minipage}
 % \vspace*{\baselineskip}
 
-% \newpage
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+Find the $n$-th term of the sequence and determine whether the sequence is an arithmetic sequence or not. 
+\begin{enumerate}
+    \item $1-\sqrt{2}$, $1-2\sqrt{2}$, $1-3\sqrt{2}$, $1-4\sqrt{2}$, $\cdots$
+    \item $\sqrt{3}$, $3$, $3\sqrt{3}$, $9$, $\cdots$
+    \item $1$, $-\frac{3}{2}$, $2$, $-\frac{5}{2}$, $3$, $\cdots$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    Find the partial sum.
+    \[\frac13+\frac23+1+\frac43+\frac53+\cdots+33\]
+\end{exercise}
+
+\begin{exercise}
+  How many terms of the arithmetic sequence $3$, $7$, $11$, $\cdots$ must be added to get $170$?
+\end{exercise}
+
+\newpage
 
 \section{Geometric Sequences}
 
@@ -199,18 +271,18 @@ The $n$-th term of a geometric sequence is given by
 \end{definition}
 
 \begin{example}
-    Find $a_n$ for the geometric sequence.
-    \begin{enumerate}
+    Find $a_n$ for the geometric sequence.\\
+    \begin{enumerate*}
         \item $2$, $-10$, $50$, $-250$, $1250$, $\cdots$.
-        \item $1$, $\frac{1}{3}$, $\frac{1}{9}$, $\frac{1}{27}$, $\frac{1}{81}$, $\cdots$.
-    \end{enumerate}
+        \item $1$, $\frac{1}{3}$, $\frac{1}{9}$, $\frac{1}{27}$, $\frac{1}{81}$, $\cdots$.\hfill\null
+    \end{enumerate*}
 \end{example}
 
 \begin{example}
     The third term of a geometric sequence is $\frac{63}{4}$, and the sixth term is $\frac{1701}{32}$. Find the fifth term.
 \end{example}
-\vspace*{6\baselineskip}
 
+\newpage
 \begin{theorem}[Sum of a geometric sequence]
     For the geometric sequence $a$, $a r$, $a r^2$, $a r^3$, $a r^4$, $\dots$, $a r^{n-1}$, $ldots$, the $n$-th partial sum is
 $$
@@ -239,13 +311,13 @@ $$
     Find the following partial sum of a geometric sequence:
 \[1+4+16+\cdots+4096.\]
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
     Find the sum 
     \[\sum\limits_{k=1}^67\left(-\frac23\right)^{k-1}.\]
 \end{example}
-\vspace*{6\baselineskip}
+
+\newpage
 
 \begin{definition}
     An expression of the form
@@ -253,15 +325,15 @@ $$
 is called a infinite series.
 \end{definition}
 
-\begin{example}
-The figure on the left shows the sum of an infinite geometric series $\sum\limits_{k=1}^\infty\frac14\cdot\left(\frac12\right)^k$
+% \begin{example}
+% The figure on the left shows the sum of an infinite geometric series $\sum\limits_{k=1}^\infty\frac14\cdot\left(\frac12\right)^k$
 
-The idea can be used to find the sum of any infinite geometric series $\sum\limits_{k=1}^\infty ar^n$ for $0<r<1$.
+% The idea can be used to find the sum of any infinite geometric series $\sum\limits_{k=1}^\infty ar^n$ for $0<r<1$.
 
-\begin{center}
-    \includegraphics[width=0.8\textwidth]{figs/infiniteseries-arn.png}
-\end{center}
-\end{example}
+% \begin{center}
+%     \includegraphics[width=0.8\textwidth]{figs/infiniteseries-arn.png}
+% \end{center}
+% \end{example}
 
 \begin{theorem}[SUM OF AN INFINITE GEOMETRIC SERIES]
 If $|r|<1$, then the infinite geometric series
@@ -277,31 +349,54 @@ If $|r| \geq 1$, the series diverges.
 
 
 \begin{example}
-Determine whether the infinite geometric series is convergent or divergent. If it is convergent, find its sum.
-\begin{enumerate}
+Determine whether the infinite geometric series is convergent or divergent. If it is convergent, find its sum.\\
+\begin{enumerate*}
+  \item $\sum\limits_{k=1}^\infty\frac14\cdot\left(\frac12\right)^k$
     \item 
 $2+\frac{2}{5}+\frac{2}{25}+\frac{2}{125}+\cdots$
 \item
-$1+\frac{7}{5}+\left(\frac{7}{5}\right)^2+\left(\frac{7}{5}\right)^3+\cdots$
-\end{enumerate}
+$1+\frac{7}{5}+\left(\frac{7}{5}\right)^2+\left(\frac{7}{5}\right)^3+\cdots$\hfill\null
+\end{enumerate*}
 \end{example}
 
 % \begin{example}
 %     Find the fraction that represents the rational number $2.3\widebar{51}$.
 % \end{example}
-% \vspace*{6\baselineskip}
+% 
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+Find the $n$-th term of the sequence and determine whether the sequence is a geometric sequence, or neither.\\ 
+\begin{enumerate*}
+    \item $\sqrt{2}$, $2$, $2\sqrt{2}$, $4$, $\cdots$
+    \item $-1$, $\frac{4}{3}$, $-\frac{5}{3}$, $2$, $\cdots$\hfill\null
+\end{enumerate*}
+\end{exercise}
+  
+\begin{exercise}
+  Determine whether the infinite geometric series is convergent or divergent. If it is convergent, find its sum.\\
+    \begin{enumerate}
+        \item $1-\frac25+\frac{4}{25}-\frac{8}{25}+\cdots$
+        \item $\frac{3}{2}+\left(\frac{3}{2}\right)^2+\left(\frac{3}{2}\right)^3+\cdots$
+        \item $a+ab^2+ab^3+ab^4+\cdots$, $|b|<1$
+        \item $a-ab^2+ab^3-ab^4+\cdots$, $|b|<1$
+    \end{enumerate}
+\end{exercise}
+
+\newpage
 
 \section{The Binomial Theorem}
 
 \begin{example}
-    Expand the power of binomial. Are there any relations between coefficients?
-\begin{enumerate}
+    Expand the power of binomial. Are there any relations between coefficients?\\
+\begin{enumerate*}
     \item $(a+b)^2$
     \item $(a+b)^3$
     \item $(a+b)^4$.
-\end{enumerate}
+\end{enumerate*}
 \end{example}
-\vspace*{6\baselineskip}
 
 
 \begin{definition}
@@ -317,20 +412,19 @@ We define $0!$ as
 \end{definition}
 
 \begin{theorem}[Properties of binomial coefficients] Binomial coefficients have the following properties.
-    \begin{enumerate}[sepno]
-        \item $\binom{n}{r}=\binom{n}{n-r}$.
-        \item $\binom{n}{r}=\binom{n-1}{r-1}+\binom{n-1}{r}$.
-    \end{enumerate}
+    \[\binom{n}{r}=\binom{n}{n-r}=\binom{n-1}{r-1}+\binom{n-1}{r}.\]
 \end{theorem}
 
 \begin{example}
-    Calculate the binomial coefficient.
-    \begin{enumerate}
+    Calculate the binomial coefficient.\\
+    \begin{enumerate*}
         \item $\binom{7}{3}$
         \item $\binom{50}{4}$
-        \item $\binom{100}{97}$
-    \end{enumerate}
+        \item $\binom{100}{97}$\hfill\null
+    \end{enumerate*}
 \end{example}
+
+\newpage
 
 \begin{theorem}[The Binomial Theorem]
 For a natural number $n$, 
@@ -343,83 +437,39 @@ where $\binom{n}{k}$ are binomial coefficients.
 \begin{example}
     Use the binomial theorem to expand $(x+y)^5$.
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
     Use the Binomial Theorem to expand $(\sqrt{x}-1)^6$.
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
     Find the term that contains $x^5$ in the expansion of $(2x-1)^{10}$.
 \end{example}
-\vspace*{6\baselineskip}
 
 \begin{example}
     Find the term that contains $x^2$ in the expansion of $\left(x^3-\frac{1}{x}\right)^{12}$.
 \end{example}
-\vspace*{6\baselineskip}
 
-\section*{Practice}
+\newpage
 
-\begin{exercise}
-    Find the first 12-th terms of the sequence with the given $n$-th term.
-\begin{enumerate}[itemsep=0.5\baselineskip,, after=\vspace*{0.5\baselineskip}]
-    \item $a_n=\dfrac{n^2}{n+1}$
-    \item $a_n=(-1)^n\dfrac{2^n}{n}$
-    \item $a_n=\dfrac{(2n)!}{2^nn!}$
-    \item $a_n=\binom{n+1}{2}$
-\end{enumerate}
-\end{exercise}
-\begin{exercise}
-    Find the first nine terms of the sequence.
-\begin{enumerate}[itemsep=0.5\baselineskip, after=\vspace*{0.5\baselineskip}]
-    \item $a_n=a_{n-1}+2n-1$, $a_1=1$
-    \item $a_n=(-1)^n\dfrac{a_{n-1}}{n}$, $a_1=1$
-    \item $a_n=a_{n-1}-a_{n-2}$, $a_1=1$ and $a_2=2$
-\end{enumerate}
-\end{exercise}
+\section*{Exercises}
 
 \begin{exercise}
-Find the $n$-th term of the sequence and determine whether the sequence is 
-an arithmetic sequence, a geometric sequence, or neither. 
-\begin{enumerate}[itemsep=0.5\baselineskip, after=\vspace*{0.5\baselineskip}]
-    \item $1-\sqrt{2}$, $1-2\sqrt{2}$, $1-3\sqrt{2}$, $1-4\sqrt{2}$, $\cdots$
-    \item $\sqrt{3}$, $3$, $3\sqrt{3}$, $9$, $\cdots$
-    \item $1$, $-\frac{3}{2}$, $2$, $-\frac{5}{2}$, $3$, $\cdots$
-\end{enumerate}
-\end{exercise}
-
-\begin{exercise}
-    Find the partial sum.
-    \begin{enumerate}[itemsep=0.5\baselineskip, after=\vspace*{0.5\baselineskip}]
-        \item $\sum\limits_{k=1}^{10}(k-1)^2$
-        \item $\sum\limits_{i=2}^{7}\frac{2i}{2i-1}$
-        \item $\sum\limits_{j=1}^{3}\frac{(-2)^j}{j+1}$
-        \item $1+0.2+(0.2)^2+\cdots+(0.2)^5$
-        \item $\frac13+\frac23+1+\frac43+\frac53+\cdots+33$
-        \item $1-\frac25+\frac{4}{25}-\frac{8}{25}+\cdots$
-        \item $a+ab^2+ab^3+ab^4+\cdots$, $|b|<1$
-        \item $a-ab^2+ab^3-ab^4+\cdots$, $|b|<1$
-    \end{enumerate}
-\end{exercise}
-
-\begin{exercise}
-    Evaluate the expression.
-    \begin{enumerate}[itemsep=0.5\baselineskip, after=\vspace*{0.5\baselineskip}]
+    Evaluate the expression.\\
+    \begin{enumerate*}
         \item $\binom{5}{2}\binom{5}{3}$
         \item $\binom{5}{3}+\binom{5}{4}$
         \item $\sum\limits_{k=0}^5\binom{5}{k}$
-        \item $\sum\limits_{k=0}^8\binom{8}{k}\binom{8}{8-k}$
-    \end{enumerate}
+        \item $\sum\limits_{k=0}^8\binom{8}{k}\binom{8}{8-k}$\hfill\null
+    \end{enumerate*}
 \end{exercise}
 
 \begin{exercise}
-Expand the expression.
-\begin{enumerate}[itemsep=0.5\baselineskip, after=\vspace*{0.5\baselineskip}]
+Expand the expression.\\
+\begin{enumerate*}
     \item $\left(2x+y\right)^6$
-    \item $\left(x-\frac{1}{x^2}\right)^5$
-\end{enumerate}
+    \item $\left(x-\frac{1}{x^2}\right)^5$\hfill\null
+\end{enumerate*}
 \end{exercise}
 
 \begin{exercise}

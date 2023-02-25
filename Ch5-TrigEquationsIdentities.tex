@@ -1,0 +1,441 @@
+% !TeX root =  main.tex
+
+\chapter{Trigonometric Identities and Equations}
+
+\section{Simplifying Trigonometric Expressions}
+
+\begin{note}[Fundamental Identities]
+  \begin{multicols}{4}
+  Pythagorean identities
+\begin{align*}
+  \sin^2 x + \cos^2 x &= 1\\
+  1 + \tan^2 x &= \sec^2 x\\
+  1 + \cot^2 x &= \csc^2 x
+\end{align*}
+
+  \columnbreak
+
+Even-odd identities
+    \begin{align*}
+      \sin(-x)  &= - \sin x\\
+      \cos(-x)  &= \cos x\\
+      \tan(-x)  &= -\tan x
+    \end{align*}
+
+    \columnbreak
+
+    Reciprocal identities
+    \begin{align*}
+      \cot x &= \frac{1}{\tan x}\\
+      \csc x &= \frac{1}{\sin x}\\
+      \sec x &= \frac{1}{\cos x}
+    \end{align*}
+ 
+    \columnbreak
+
+    Quotient identities 
+    \begin{align*}
+      \tan x & =\dfrac{\sin x}{\cos x}\\
+      \cot x &=\dfrac{\cos x}{\sin x}
+    \end{align*}
+  
+    % \columnbreak
+
+    % % Cofunction identities
+
+    % \begin{align*}
+    %   \sin\left(\frac{\pi}{2} - x\right) &= \cos x\\
+    %   \cos\left(\frac{\pi}{2} - x\right) &= \sin x\\
+    %   \tan\left(\frac{\pi}{2} - x\right) &= \cot x
+    % \end{align*}
+  \end{multicols}
+\end{note}
+
+\begin{exercise}
+  Verify the trigonometric identity.\\
+  \begin{enumerate*}
+    \item $\tan \theta \cos \theta=\sin \theta$
+    \item $\dfrac{{\sec}^2 \theta-1}{{\sec}^2 \theta}={\sin}^2 \theta$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+ Simplify the trigonometric identity.\\
+  \begin{enumerate*}
+    \item $\dfrac{{\sin}^2(-\theta)-{\cos}^2(-\theta)}{\sin(-\theta)-\cos(-\theta)}$
+    \item $(1-{\cos}^2 x)(1+{\cot}^2 x)$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\newpage
+\section*{Exercises}
+
+\begin{exercise}
+  Verify the trigonometric identity.\\
+  \begin{enumerate*}
+    \item $\dfrac{\tan x}{\sec x}\sin (-x)=\cos ^2x$
+    \item $\dfrac{\cos ^2 \theta -\sin ^2 \theta }{1-\tan ^2 \theta }=\sin ^2 \theta$
+    \item $\dfrac{\sec (-x)}{\tan x+\cot x}=-\sin (-x)$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+\begin{exercise}
+  Simplify the trigonometric identity.\\
+  \begin{enumerate*}
+    \item $\tan x\sin x+\sec x\cos^2x$
+    \item $\dfrac{\cot t+\tan t}{\sec (-t)}$
+    \item $\dfrac{1-\cos ^2 x}{\tan ^2 x}+2\sin ^2 x$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\newpage
+
+\section{Formulas of Angle Addition}
+\begin{theorem}[Sine and Cosine of Sum or Difference of Angles\footnotemark]
+\begin{align*}
+\sin(\alpha+\beta) & =\sin \alpha \cos \beta + \sin \alpha \cos \beta\\
+\cos(\alpha+\beta) & =\cos \alpha \cos \beta-\sin \alpha \sin \beta\\
+\sin(\alpha-\beta) &=\sin \alpha \cos \beta -  \sin \alpha \cos \beta\\
+\cos(\alpha-\beta) &=\cos \alpha \cos \beta+\sin \alpha \sin \beta
+\end{align*}  
+\end{theorem}
+
+\footnotetext{One proof is to use Euler formula: $e^{i\alpha}=\cos\alpha + i\sin\alpha$.}
+
+\begin{example}
+  Find the exact value.\\
+  \begin{enumerate*}
+    \item $\cos(75\degree)$
+    \item $\sin(135\degree)$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+
+\begin{example}
+  Find the exact value of $\sin\left ({\cos}^{-1}\left(\frac{1}{2}\right)+{\sin}^{-1}\left(\frac{3}{5}\right)\right)$.
+\end{example}
+
+\newpage
+
+\begin{example}
+  Given $\sin \alpha=\frac{3}{5}, \quad 0<\alpha<\frac{\pi}{2}$, and $\cos \beta=-\frac{5}{13}, \quad \pi<\beta<\frac{3\pi}{2}$, find\\
+  \begin{enumerate*}
+    \item $\sin(\alpha+\beta)$
+    \item $\cos(\alpha-\beta)$
+    \item $\tan(\alpha+\beta)$
+    \item $\csc(\alpha-\beta)$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+
+\begin{example}
+  Prove the following identities using the identities for sum/difference of angles.
+  \begin{enumerate*}
+    \item $\sin(\frac{\pi}{2}-x)=\cos x$
+    \item $\sin(\pi - x)=\sin x$
+    \item $\cos(\pi - x)=-\cos x$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\begin{example}
+  Verify the identity $\sin(\alpha+\beta)+\sin(\alpha-\beta)=2\sin \alpha \cos \beta$.
+\end{example}
+
+\begin{example}
+  Verify the identity $\cos(2\alpha)=\cos^2\alpha-\sin^2\alpha$.
+\end{example}
+
+\newpage
+\section*{Exercises}
+\begin{exercise}
+  Find the exact value.\\
+  \begin{enumerate*}
+    \item $\cos(75\degree)$
+    \item $\sin(135\degree)$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Find the exact value of $\cos\left(\cos^{-1}\left(\frac{1}{3}\right) - \sin^{-1}\left(\frac45\right)\right)$.
+\end{exercise}
+
+\begin{exercise}
+  Given $\sin \alpha=-\frac{4}{5}, \quad \pi<\alpha<\frac{3\pi}{2}$, and $\cos \beta=\frac{12}{13}, \quad 0<\beta<\frac{\pi}{2}$, find\\
+  \begin{enumerate*}
+    \item $\sin(\alpha-\beta)$
+    \item $\cos(\alpha+\beta)$
+    \item $\cot(\alpha-\beta)$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  Prove the following identities using the identities for sum/difference of angles.
+  \begin{enumerate*}
+    \item $\cos(x+\frac{\pi}{2})=\sin x$
+    \item $\sin(x-\pi)=-\sin x$
+    \item $\cos(x+\pi)=-\cos x$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Verify the identity $\cos(\alpha-\beta)-\cos(\alpha+\beta)=2\sin \alpha \sin \beta$.
+\end{exercise}
+
+\begin{exercise}
+  Verify the identity $\sin(2\alpha)=2\sin \alpha \cos \alpha$.
+\end{exercise}
+
+
+\newpage
+
+\section{Double and Half Angle Formulas}
+
+\begin{corollary}[Double Angle Identities]
+  \begin{align*}
+    \sin(2\alpha)=&2\sin\alpha\cos\alpha\\
+    \cos(2\alpha)=&\cos^2\alpha-\sin^2\alpha\\
+    =&2\cos^2\alpha -1\\
+    =&1-2\sin^2\alpha
+  \end{align*}
+\end{corollary}
+
+\begin{corollary}[Half Angle Identities]
+  \begin{align*}
+    \sin^2\left(\dfrac{\theta}{2}\right)=&\dfrac{1-\cos\theta}{2}\\
+    \cos^2\left(\dfrac{\theta}{2}\right)=&\dfrac{1+\cos\theta}{2}
+  \end{align*}
+\end{corollary}
+
+\begin{example}
+  Find the exact value.\\
+  \begin{enumerate*}
+    \item $\sin\left(2\cos^{-1}\left(\dfrac{3}{5}\right)\right)$
+    \item $\tan\left(2\sin^{-1}\left(\dfrac{3}{5}\right)\right)$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\begin{example}
+  Verify the identity ${\cos}^4\theta-{\sin}^4 \theta=\cos(2\theta)$.
+\end{example}
+
+\begin{example}
+  Verify the identity:  $\tan(2\theta)=2\cot\theta-\tan\theta$
+\end{example}
+
+\begin{example}
+  Write an equivalent expression for $\cos^4 x$ that does not involve any powers of sine or cosine greater than $1$.
+\end{example}
+
+\newpage
+
+\begin{example}
+  Find $\sin 15\degree$ and $\cos 15\degree$.
+\end{example}
+
+\begin{example}
+  Given that $\tan\alpha=\dfrac{8}{15}$ and $\alpha$ lies in quadrant III, find the exact value of the following:\\
+\begin{enumerate*}
+  \item $\sin\left(\dfrac{\alpha}{2}\right)$
+  \item $\cos\left(\dfrac{\alpha}{2}\right)$
+  \item  $\tan\left(\dfrac{\alpha}{2}\right)$
+\end{enumerate*}
+\end{example}
+
+\newpage
+
+\section*{Exercises}
+
+\begin{exercise}
+  Find the exact value.\\
+  \begin{enumerate*}
+    \item $\cos\left(2\sin^{-1}\left(\dfrac{4}{5}\right)\right)$
+    \item $\tan\left(2\cos^{-1}\left(\dfrac{4}{5}\right)\right)$
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Verify the identity $(\cos\theta-\sin\theta)^2=1-\sin(2\theta)$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  Write an equivalent expression for $\sin^4 x$ that does not involve any powers of sine or cosine greater than $1$.
+\end{exercise}
+
+\begin{exercise}
+  Given that $\sin \alpha=-\dfrac{4}{5}$ and $\alpha$ lies in quadrant IV, find the exact value of $\tan\left(\dfrac{\alpha}{2}\right)$.
+\end{exercise}
+
+\newpage
+
+\section{Sum-to-Product and Product-to-Sum Formulas}
+
+\begin{corollary}[The Product-to-Sum Formulas]
+\begin{align*}
+  \cos \alpha \cos \beta =& \dfrac{1}{2}[\cos(\alpha - \beta) + \cos(\alpha + \beta)]\\
+  \sin \alpha \cos \beta =& \dfrac{1}{2}[\sin(\alpha+\beta)+\sin(\alpha - \beta)]\\
+  \sin \alpha \sin \beta =& \dfrac{1}{2}[\cos(\alpha-\beta)-\cos(\alpha+\beta)]
+\end{align*}
+\end{corollary}
+
+\begin{corollary}[The Sum-to-Produc Formulas]
+\begin{align*}
+  \cos\alpha + \cos\beta = & 2\cos\left(\dfrac{\alpha+\beta}{2}\right)\cos\left(\dfrac{\alpha-\beta}{2}\right)\\
+  \sin\alpha + \sin\beta = & 2\sin\left(\dfrac{\alpha+\beta}{2}\right)\cos\left(\dfrac{\alpha-\beta}{2}\right)\\
+  \cos\alpha - \cos\beta = & 2\sin\left(\dfrac{\alpha+\beta}{2}\right)\sin\left(\dfrac{\alpha-\beta}{2}\right)\\
+\end{align*}
+\end{corollary}
+
+\begin{example}
+  Write the following product as a sum\\
+  \begin{enumerate*}
+    \item $2\cos\left(\dfrac{7x}{2}\right) \cos\left(\dfrac{3x}{2}\right)$
+    \item $\sin\left(3\theta\right) \cos\left(5\theta\right)$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+
+\begin{example}
+  Write the following difference or sum expression as a product.
+  \begin{enumerate*}
+    \item $\sin(3\theta)-\sin\theta$
+    \item $\cos(2\theta)+\cos(4\theta)$
+    \item $\cos(4\theta)-\cos(2\theta)$
+    \item $\sin\theta-\cos\theta$
+    \hfill\null
+  \end{enumerate*}
+\end{example}
+
+\newpage
+
+\begin{example}
+  Evaluate
+  \begin{enumerate*}
+    \item $\cos(15\degree)-\cos(75\degree)$
+    \item $\sin(15\degree)+\sin(45\degree)$
+    \item $\sin(45\degree)-\cos(135\degree)$
+    \hfill\null
+  \end{enumerate*}
+\end{example}
+
+\begin{example}
+  Prove the identity:
+$$
+\dfrac{\cos(4t)-\cos(2t)}{\sin(4t)+\sin(2t)}=-\tan t
+$$
+\end{example}
+
+\newpage
+\section*{Exercises}
+
+\begin{exercise}
+  Write the following product as a sum\\
+  \begin{enumerate*}
+    \item $\sin\left(\dfrac{\theta}{2}\right) \cos\left(\dfrac{5\theta}{2}\right)$
+    \item $\sin\left(4\theta\right) \sin\left(2\theta\right)$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Write the following difference or sum expression as a product.
+  \begin{enumerate*}
+    \item $\sin(5\theta)-\sin\theta$
+    \item $\cos(\theta)+\sin(\theta)$
+    \item $\cos(3\theta)+\cos(5\theta)$\hfill\null
+  \end{enumerate*}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  Evaluate
+  \begin{enumerate*}
+    \item $\sin(75\degree)-\cos(75\degree)$
+    \item $\sin(45\degree)+\sin(135\degree)$
+  \end{enumerate*}
+\end{exercise}
+
+\begin{exercise}
+  Prove the identity $\sin x + \sin(3x)=4\sin x\cos^2 x$.
+\end{exercise}
+
+\newpage
+
+\section{Solving Trigonometric Equations}
+\begin{example}
+  Find all possible exact solutions for the equation.\\
+  \begin{enumerate*}
+    \item $\cos \theta=\dfrac{1}{2}$
+    \item $\sin \theta=\dfrac{1}{2}$
+    \item $\tan \theta=\dfrac{\sqrt{3}}{3}$\hfill\null
+  \end{enumerate*}
+\end{example}
+
+\begin{example}
+  Solve the equation exactly: $2\cos \theta-3=-5$, $0\le \theta<2\pi$.
+\end{example}
+
+\begin{example}
+  Solve the equation exactly:  $2\sin^2\theta-1=0$, $0\le \theta<2\pi$.
+\end{example}
+
+\newpage
+
+\begin{example}
+  Solve the equation exactly: $\cos^2\theta+3 \cos \theta-1=0$, $0\le \theta<2\pi$.
+\end{example}
+
+\begin{example}
+  Solve the equation exactly over the interval $0\le x<2\pi$
+\[\cos x \cos(2x)+\sin x \sin(2x)=\dfrac{\sqrt{3}}{2}.\]
+\end{example}
+
+\begin{example}
+  Solve the equation exactly: $\cos(2\theta)=\cos\theta$.
+\end{example}
+
+\newpage
+
+\begin{example}
+  Solve the equation exactly: $2\cos^2\theta-3\sin\theta=3$.
+\end{example}
+
+\begin{example}
+  Solve the equation quadratic in form exactly: $2 {\sin}^2 \theta-3 \sin \theta+1=0$, $0\le\theta<2\pi$
+\end{example}
+
+\newpage
+\section*{Exercises}
+
+\begin{exercise}
+  Solve the equation exactly: $2\sin \theta\cos\theta-\sqrt{3}=0$, $0\le \theta<2\pi$.
+\end{exercise}
+
+\begin{exercise}
+  Solve the equation exactly: $\cos^2\theta+3 \cos \theta-1=0$, $0\le \theta<2\pi$.
+\end{exercise}
+
+\begin{exercise}
+  Solve the equation quadratic in form exactly: $2 {\sin}^2 \theta-3 \sin \theta+1=0$, $0\le\theta<2\pi$
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+  Solve the equation exactly over the interval $0\le x<2\pi$
+\[\sin x \cos(2x)+\cos x \sin(2x)=\dfrac{1}{2}.\]
+\end{exercise}
+
+\begin{exercise}
+  Solve the equation exactly: $sin(2\theta)=cos\theta$.
+\end{exercise}
+
+\begin{exercise}
+  Solve the equation exactly: $2\sin^2\theta=3\cos\theta-3$.
+\end{exercise}
