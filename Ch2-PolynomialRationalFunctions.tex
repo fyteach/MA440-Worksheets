@@ -319,7 +319,7 @@ where \(k\) and \(p\) are real numbers, and \(k\) is known as the \textbf{coeffi
 
 
 \begin{note}[Local Graph Near a Zero]
-  Let $f$ be a polynomial with positive leading coefficient and $c$ is a zero of $f$ of the multiplicity $m$. The local shape of a polynomial function with positive leading coefficient near a zero  is of one of the following types.
+  Let $f$ be a polynomial with positive leading coefficient and $c$ is a zero of $f$ of the multiplicity $m$. The local shape of a polynomial function with positive leading coefficient near a zero is of one of the following types, or a vertical reflection of that.
   \begin{center}
     \begin{tikzpicture}
       \begin{axis}[
@@ -636,7 +636,7 @@ Let $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0$ be polynomial with integer coe
 \end{example}
 
 \begin{definition}[Vertical Asymptote]
-  A \textbf{vertical asymptote} of a function $f$ is a vertical line $x=a$ where the graph of $f$ goes to positive or negative infinity as $x$ approached $a$ from left or right, that is, as $x\rightarrow a^- ~\text{or}~ a^+$, $f(x)\rightarrow \infty$, or as $x\rightarrow a^- ~\text{or}~ a^+$, $f(x)\rightarrow -\infty$, where $x\to a^-$ ($a^+$) means $x$ approaches $a$ from the left (right).
+  A \textbf{vertical asymptote} of a function $f$ is a vertical line $x=a$ where the graph of $f$ goes to positive or negative infinity as $x$ approached $a$ from left or right, that is, as $x\rightarrow a^- ~\text{or}~ a^+$, $f(x)\rightarrow \infty$, or as $x\rightarrow a^- ~\text{or}~ a^+$, $f(x)\rightarrow -\infty$, where $x\to a^-$ (or $a^+$) means $x$ approaches $a$ from the left (respectively, right).
 
   We say a function $f$ has a \textbf{removable discontinuities} (or \textbf{hole}) at $x=a$ if $f(x)\to b$ as $x\to a$ but $f(a)$ is undefined.
 \end{definition}
@@ -732,7 +732,7 @@ $f(x)=\dfrac{x^{2} + x - 6}{x^{3} - 2 x^{2} - x + 2}$ if they exist.
   \item Find the $x$-intercept(s) and plot them.
   \item Find all vertical asymptotes and graph them as dashed lines.
   \item Find the horizontal asymptote or the slant asymptote (or neither), and graph the asymptote as a dashed line.
-  \item Plot a test point in each interval whose boundary values are zeros of the denominator.
+  \item Plot a test point in each interval whose boundary values are zeros of the denominators or the function to determine if the graph is above the axis or below the axis over that interval.
   \item Sketch the function based on the information found above.
   \end{enumerate}
 \end{howto}
@@ -771,10 +771,10 @@ $f(x)=\dfrac{x^{2} + x - 6}{x^{3} - 2 x^{2} - x + 2}$ if they exist.
 \begin{howto}[Polynomial or Rational Inequalities]
 \begin{enumerate}
   \item Rewrite the inequality into the form $f(x)\text{~inequality symbol~} 0$.
-  \item Find real zeros of $f$ and its denominator.
-  \item Break then number line into intervals using zeros from the previous step.
+  \item Find all real zeros of $f(x)$.
+  \item Break the \textbf{\uppercase{domain of the function}} (the whole number line if $f$ is a polynomial) into intervals using zeros from the previous step.
   \item Choose a test point from each interval to determine the sign of $f$.
-  \item Determine the solutions (intervals in which the test point satisfies the inequality) and whether the boundary values of the intervals should be included.
+  \item Determine the solutions (union of intervals in which the test point satisfies the inequality) and whether the boundary values of the intervals should be included.
 \end{enumerate}
 \end{howto}
 
