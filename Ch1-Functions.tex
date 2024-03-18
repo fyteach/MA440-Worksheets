@@ -870,7 +870,7 @@ Denote the new function by $y=g(x)$. Find $g(x)$.
     \item A vertical stretch/compression with the factor $|A|$ followed by a refection about $x$-axis if $A<0$.
     \item A vertical shift of $D$ units
     \item A horizontal shift of $C$ units.
-    \item A horizontal stretch/compression with the factor $|B|$ followed by a refection about $y$-axis if $B<0$.
+    \item A horizontal stretch/compression with the factor $\frac{1}{|B|}$ followed by a refection about $y$-axis if $B<0$.
   \end{enumerate}
 \end{howto}
 \begin{remark}
@@ -878,12 +878,11 @@ Denote the new function by $y=g(x)$. Find $g(x)$.
 
   The order of horizontal or vertical transformation depends on how to get the point $(x, y)$ from a point $(a, b)$ on the original function under the substitutions $a=Bx+C$ and $y=Ab+D$. 
   
-  To get $x$, one may add $-C$ to both sides first which corresponds to a horizontal shift of $-C$ units, and then multiply by $\frac1B$ which corresponds to a horizontal stretch/compression by a factor of $\frac1B$. To get $y$, one may first multiply $b$ by $A$ which corresponds to a vertical stretch/compression by a factor $A$ and then add $D$ which corresponds to a vertical shift of $D$ units.
+  To get $x$, one may add $-C$ to both sides first which corresponds to a horizontal shift of $-C$ units, and then multiply by $\frac{1}{|B|}$ which corresponds to a horizontal stretch/compression by a factor of $\frac1B$ (if $B$ is negative, a horizontal reflection should be added). To get $y$, one may first multiply $b$ by $|A|$ which corresponds to a vertical stretch/compression by a factor $A$ (again if $A$ is negative, a vertical reflection should be added) and then add $D$ which corresponds to a vertical shift of $D$ units. The scaling (dilation) is a stretch (or compression) if the multiplicative factor is greater than 1 (or less than 1 respectively).
 
   Note one may also solve $x$ from $a=Bx+C$ by multiplying $\frac{1}{B}$ first then add $-\frac CB$ which corresponds to horizontal stretch/compression by a factor $\frac1B$ followed by a horizontal shift by $-\frac CB$ units.
 
   Similarly, one may also get $y$ as $y=A(b+\frac DA)$ which leads to a vertical shift of $\frac DA$ units followed by a vertical stretch/compression by a factor $A$. 
-
 
 \end{remark}
 \begin{example}
@@ -911,10 +910,10 @@ Sketch the graph of the function $g(x)=2\sqrt{3x-1}-4$ by a sequence of transfor
 \begin{example}
   Find an equation of the function $y=g(x)$ whose graph is obtained from $f(x)=\sqrt{x}$ by the following transformations in the given order.
   \begin{enumerate}
-    \item stretch vertically by a factor of 2
-    \item shift downward 2 units
-    \item shift 3 units to the left
-    \item stretch horizontally by a factor $\dfrac{1}{2}$.
+    \item Stretch vertically by a factor of 2
+    \item Shift downward 2 units
+    \item Shift 3 units to the left
+    \item Stretch horizontally by a factor $\dfrac{1}{2}$.
   \end{enumerate}
 \end{example}
 
@@ -951,7 +950,7 @@ Sketch the graph of the function $g(x)=2\sqrt{3x-1}-4$ by a sequence of transfor
   \begin{enumerate}
     \item Compress vertically by a factor of $\dfrac{1}{2}$.
     \item Reflect vertically.
-    \item shift downward 2 units.
+    \item Shift downward 2 units.
     \item Compress horizontal by a factor $2$.
     \item Shift 3 units to the right.
   \end{enumerate}
@@ -974,7 +973,7 @@ The notation \(f^{-1}\) is read “\(f\) inverse.”
   \begin{multicols}{2}
     \begin{enumerate}[resume=PropertiesInverse]
       \item In general, $f^{-1}(x)\neq f(x)^{-1}$.
-      \item The graphs of a one-to-one function $f$ and its inverse $f^{-1}$ are symmetric about the diagonal line $y=x$.\\
+      \item The graphs of a one-to-one function $f$ and its inverse $f^{-1}$ are symmetric about the diagonal line $y=x$.
       \item Suppose $f$ has the domain $A$ and the range $B$, then $f^{-1}$ has the domain $B$ and the range $B$ (and vice verse).
       \vfill\null
     \end{enumerate}
